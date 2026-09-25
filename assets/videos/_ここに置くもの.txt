@@ -1,0 +1,2 @@
+hero.mp4 … トップ背景のループ動画（音声なし・10〜20秒・1920×1080・10MB以下推奨）
+※MV本編は YouTube に上げて data.js の movies に youtubeId を書く方式です（ここには置かない）

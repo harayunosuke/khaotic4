@@ -1,0 +1,1 @@
+独自フォント（.woff2）を使う場合に置く。通常は Google Fonts（Oswald / Noto Sans JP）を読み込んでいるので空でOK

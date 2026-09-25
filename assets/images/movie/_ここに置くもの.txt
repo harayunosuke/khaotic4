@@ -1,0 +1,3 @@
+MV・動画のサムネイル（16:9、1280×720 px）
+例: mv01.jpg, perf01.jpg, behind01.jpg
+※ data.js に youtubeId を入れれば YouTube のサムネイルが自動で使われるので、ここは任意

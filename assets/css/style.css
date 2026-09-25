@@ -1,0 +1,335 @@
+/* =========================================================
+   khaotic4 スタイル
+   色・フォントは :root の変数を変えるだけで全体に反映されます。
+   ========================================================= */
+:root {
+  --bg: #0a0a0b;
+  --bg-2: #141416;
+  --text: #f2f2f2;
+  --text-sub: #8d8d93;
+  --line: rgba(255, 255, 255, 0.14);
+  --accent: #2f7bf5; /* グループのテーマカラー */
+  --member-stripe: linear-gradient(90deg, #f2f2f2 0 25%, #f06fa8 25% 50%, #2f7bf5 50% 75%, #f5c518 75%); /* メンバーカラー4色 */
+  --font-en: "Oswald", "Helvetica Neue", Arial, sans-serif;
+  --font-ja: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --header-h: 72px;
+  --gutter: clamp(16px, 5vw, 64px);
+  --max: 1280px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ja);
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body.nav-open, body.modal-open { overflow: hidden; }
+img, video { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, p { margin: 0; }
+
+/* ---------- 画像プレースホルダー（画像が無い時に置くべきファイル名を表示） ---------- */
+.ph {
+  position: relative;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,.03) 14px 28px),
+    var(--bg-2);
+}
+.ph:not(:has(img, video))::after {
+  content: attr(data-file);
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  padding: 12px; text-align: center;
+  font-size: 11px; color: var(--text-sub); word-break: break-all;
+}
+.ph img, .ph video { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+
+/* ---------- ヘッダー ---------- */
+#site-header {
+  position: fixed; inset: 0 0 auto; z-index: 50;
+  height: var(--header-h);
+  transition: background .3s;
+}
+#site-header.is-scrolled { background: rgba(10,10,11,.85); backdrop-filter: blur(10px); }
+.header-inner {
+  height: 100%; padding: 0 var(--gutter);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.header-logo img { height: 28px; width: auto; }
+.logo-text { font-family: var(--font-en); font-size: 24px; font-weight: 600; letter-spacing: .08em; }
+.menu-btn { position: relative; z-index: 60; width: 40px; height: 40px; }
+.menu-btn span {
+  position: absolute; left: 8px; right: 8px; height: 2px; background: var(--text);
+  transition: transform .3s, top .3s;
+}
+.menu-btn span:nth-child(1) { top: 15px; }
+.menu-btn span:nth-child(2) { top: 23px; }
+.nav-open .menu-btn span:nth-child(1) { top: 19px; transform: rotate(45deg); }
+.nav-open .menu-btn span:nth-child(2) { top: 19px; transform: rotate(-45deg); }
+
+.global-nav {
+  position: fixed; inset: 0; z-index: 55;
+  background: var(--bg);
+  display: flex; flex-direction: column; justify-content: center; gap: 40px;
+  padding: 0 var(--gutter);
+  opacity: 0; visibility: hidden; transition: opacity .4s, visibility .4s;
+}
+.nav-open .global-nav { opacity: 1; visibility: visible; }
+.global-nav ul { display: grid; gap: 4px; }
+.global-nav a {
+  font-family: var(--font-en); font-size: clamp(36px, 8vw, 72px);
+  line-height: 1.15; letter-spacing: .04em; font-weight: 500;
+  transition: color .2s;
+}
+.global-nav a:hover, .global-nav a.is-current { color: var(--accent); }
+
+.sns { display: flex; gap: 18px; }
+.sns svg { width: 20px; height: 20px; fill: currentColor; }
+.sns a:hover { color: var(--accent); }
+
+/* ---------- ヒーロー ---------- */
+#hero {
+  position: relative; height: 100svh; min-height: 560px;
+  display: flex; align-items: flex-end;
+  padding: 0 var(--gutter) 12vh;
+  overflow: hidden;
+}
+.hero-media { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 30%, #26262b, var(--bg) 70%); }
+.hero-media img, .hero-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--bg) 0%, rgba(10,10,11,.55) 35%, transparent 65%); }
+.hero-text { position: relative; }
+.hero-title {
+  font-family: var(--font-en); font-weight: 700;
+  font-size: clamp(64px, 16vw, 220px); line-height: .9; letter-spacing: -.01em;
+}
+.hero-title img { width: min(760px, 86vw); height: auto; filter: drop-shadow(0 4px 24px rgba(0,0,0,.5)); }
+.hero-copy { font-family: var(--font-en); font-size: clamp(14px, 1.6vw, 20px); letter-spacing: .3em; margin-top: 16px; color: var(--text); text-shadow: 0 2px 12px rgba(0,0,0,.8); }
+.play-movie {
+  display: inline-flex; align-items: center; gap: 14px; margin-top: 32px;
+  font-family: var(--font-en); letter-spacing: .2em;
+}
+.play {
+  display: inline-block; width: 56px; height: 56px; border: 1px solid currentColor; border-radius: 50%;
+  position: relative; transition: background .3s, color .3s;
+}
+.play::after {
+  content: ""; position: absolute; left: 52%; top: 50%; transform: translate(-50%, -50%);
+  border-style: solid; border-width: 8px 0 8px 13px; border-color: transparent transparent transparent currentColor;
+}
+.play-movie:hover .play { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.scroll-sign {
+  position: absolute; right: var(--gutter); bottom: 32px;
+  font-family: var(--font-en); font-size: 11px; letter-spacing: .3em; writing-mode: vertical-rl;
+  padding-bottom: 70px;
+}
+.scroll-sign::after {
+  content: ""; position: absolute; left: 50%; bottom: 0; width: 1px; height: 60px; background: var(--text);
+  animation: scrollLine 2s infinite;
+}
+@keyframes scrollLine { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+
+/* ---------- セクション共通 ---------- */
+main { display: block; }
+.section { padding: clamp(80px, 12vw, 160px) var(--gutter); max-width: var(--max); margin: 0 auto; }
+.sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: clamp(32px, 5vw, 56px); }
+.sec-title {
+  font-family: var(--font-en); font-weight: 600;
+  font-size: clamp(40px, 7vw, 88px); line-height: 1; letter-spacing: .02em;
+}
+.sec-title small { display: block; font-family: var(--font-ja); font-size: 12px; font-weight: 400; color: var(--text-sub); letter-spacing: .2em; margin-top: 10px; }
+.view-all {
+  font-family: var(--font-en); letter-spacing: .2em; font-size: 13px;
+  display: inline-flex; align-items: center; gap: 10px; white-space: nowrap;
+}
+.view-all::after { content: ""; width: 32px; height: 1px; background: currentColor; transition: width .3s; }
+.view-all:hover::after { width: 48px; }
+.cat {
+  display: inline-block; font-family: var(--font-en); font-size: 11px; letter-spacing: .15em;
+  border: 1px solid var(--line); padding: 1px 10px; line-height: 1.8;
+}
+time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub); }
+
+/* 下層ページのタイトル */
+.page-head { padding: calc(var(--header-h) + 80px) var(--gutter) 0; max-width: var(--max); margin: 0 auto; }
+.page-head .sec-title { font-size: clamp(56px, 11vw, 140px); }
+.page-head + .section { padding-top: 56px; }
+
+/* ---------- MUSIC VIDEO / MOVIE カード ---------- */
+.mv-grid { display: grid; grid-template-columns: 1.6fr 1fr; grid-template-rows: auto auto; gap: 24px; }
+.mv-grid .movie-card:first-child { grid-row: span 2; }
+.mv-grid:has(> :only-child) { grid-template-columns: 1fr; }
+.movie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 40px 24px; }
+.movie-card { display: block; }
+.movie-thumb { position: relative; aspect-ratio: 16 / 9; }
+.movie-thumb .ph { position: absolute; inset: 0; }
+.movie-thumb .play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,.35); color: #fff; }
+.movie-card:hover .ph img { transform: scale(1.05); }
+.movie-card:hover .play { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.movie-meta { display: flex; gap: 12px; align-items: center; margin-top: 14px; font-size: 12px; }
+.movie-title { margin-top: 6px; font-weight: 500; }
+
+/* カルーセル */
+.carousel { position: relative; }
+.carousel-track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(80vw, 400px); gap: 24px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+  padding-right: var(--gutter);
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-track > * { scroll-snap-align: start; }
+.carousel-nav { display: flex; gap: 12px; }
+.carousel-nav button {
+  width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%;
+  font-family: var(--font-en); transition: border-color .2s, color .2s;
+}
+.carousel-nav button:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---------- NEWS ---------- */
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.tab {
+  font-family: var(--font-en); font-size: 13px; letter-spacing: .15em;
+  padding: 6px 18px; border: 1px solid var(--line); transition: all .2s;
+}
+.tab:hover { border-color: var(--text); }
+.tab.is-active { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+.news-list { border-top: 1px solid var(--line); }
+.news-item a, .news-article summary {
+  display: grid; grid-template-columns: 120px 90px 1fr; align-items: center; gap: 16px;
+  padding: 24px 0; border-bottom: 1px solid var(--line); transition: padding .3s, color .2s;
+}
+.news-item a:hover { padding-left: 12px; color: var(--accent); }
+.news-item .cat, .news-article .cat { justify-self: start; }
+.news-article summary { cursor: pointer; list-style: none; }
+.news-article summary::-webkit-details-marker { display: none; }
+.news-article summary:hover { color: var(--accent); }
+.news-body { padding: 24px 0 40px; border-bottom: 1px solid var(--line); display: grid; gap: 24px; }
+.news-image { max-width: 640px; aspect-ratio: 16 / 9; }
+.news-body p { white-space: pre-wrap; }
+
+/* ---------- PROFILE ---------- */
+.profile-top { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
+/* 写真は切り抜かずに元の比率（3:2）で表示。長文の横でスクロール追従 */
+.group-photo { aspect-ratio: 3 / 2; position: sticky; top: calc(var(--header-h) + 24px); }
+.group-photo img { object-position: center 30%; }
+.group-name { font-family: var(--font-en); font-size: 40px; margin-bottom: 16px; }
+.lead { white-space: pre-line; line-height: 2.1; }
+.lead + .lead { margin-top: 1.4em; }
+.member-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: clamp(40px, 6vw, 80px); }
+.member-card { display: block; text-align: left; width: 100%; }
+.member-photo { aspect-ratio: 4 / 5; }
+.member-photo img { object-position: top; }
+.member-card { border-bottom: 3px solid var(--mc); padding-bottom: 4px; }
+.member-card:hover .ph img { transform: scale(1.05); }
+.member-name {
+  display: flex; align-items: center; gap: 10px; margin-top: 12px;
+  font-family: var(--font-en); font-size: 20px; letter-spacing: .08em;
+}
+.member-name::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--mc); }
+
+/* ---------- DISCOGRAPHY ---------- */
+.disc-list { display: grid; gap: clamp(48px, 6vw, 80px); }
+.disc-item { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
+.disc-jacket { aspect-ratio: 1 / 1; }
+.disc-info h3 { font-family: var(--font-en); font-size: clamp(28px, 4vw, 44px); line-height: 1.2; margin: 12px 0 4px; }
+.tracks { list-style: decimal-leading-zero; padding-left: 2.2em; margin-top: 24px; color: var(--text-sub); }
+.tracks li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+.tracks li::marker { font-family: var(--font-en); }
+.disc-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.btn-sm {
+  font-family: var(--font-en); font-size: 12px; letter-spacing: .15em;
+  padding: 8px 20px; border: 1px solid var(--text); transition: all .2s;
+}
+.btn-sm:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+/* トップのジャケットタイル */
+.disc-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.disc-tile { display: grid; gap: 8px; align-content: start; }
+.disc-tile .cat { justify-self: start; margin-top: 4px; }
+.disc-tile p { font-size: 14px; font-weight: 500; line-height: 1.5; }
+.disc-tile:hover .ph img { transform: scale(1.05); }
+
+/* ---------- GALLERY ---------- */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
+.gallery-item .ph { aspect-ratio: 4 / 3; }
+.gallery-item:hover .ph img { transform: scale(1.05); }
+
+/* セクション見出しの下にメンバーカラーの帯 */
+.sec-title::after { content: ""; display: block; width: 64px; height: 3px; margin-top: 16px; background: var(--member-stripe); }
+
+/* ---------- モーダル ---------- */
+.modal { position: fixed; inset: 0; z-index: 100; display: none; }
+.modal.is-open { display: grid; place-items: center; padding: 16px; }
+.modal-bg { position: absolute; inset: 0; background: rgba(0,0,0,.9); }
+.modal-body { position: relative; width: min(1100px, 100%); max-height: calc(100svh - 32px); overflow: auto; animation: fadeUp .4s; }
+.modal-close { position: sticky; top: 0; float: right; font-size: 32px; line-height: 1; width: 44px; height: 44px; z-index: 1; }
+.video-wrap { clear: both; aspect-ratio: 16 / 9; background: #000; }
+.video-wrap iframe, .video-wrap video { width: 100%; height: 100%; border: 0; }
+.zoom-img { clear: both; display: block; margin: 0 auto; max-width: 100%; max-height: calc(100svh - 96px); width: auto; }
+.member-detail { clear: both; display: grid; grid-template-columns: 1fr 1fr; background: var(--bg-2); }
+.member-detail-photo { aspect-ratio: 4 / 5; }
+.member-detail-photo img { object-position: top; }
+.member-real-photo { grid-column: 1 / -1; aspect-ratio: 3 / 2; margin-top: 4px; }
+.member-gallery { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding-top: 4px; }
+.member-gallery-photo { aspect-ratio: 9 / 16; }
+.member-gallery-photo img { object-position: top; }
+.member-detail-info { padding: clamp(24px, 4vw, 56px); border-top: 4px solid var(--mc); }
+.member-detail-info h2 { font-family: var(--font-en); font-size: clamp(36px, 5vw, 56px); line-height: 1.1; }
+.member-detail-info .name-ja { font-size: 18px; font-weight: 500; margin-top: 8px; }
+.member-detail-info .name-ja small { font-size: 12px; color: var(--text-sub); margin-left: 12px; }
+.member-detail-info .romaji { font-family: var(--font-en); letter-spacing: .12em; color: var(--text-sub); font-size: 13px; }
+.member-detail-info .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--mc); margin-right: 8px; }
+.member-detail-info .works { list-style: none; display: grid; gap: 6px; }
+.member-detail-info .works li { position: relative; padding-left: 1.2em; }
+.member-detail-info .works li::before { content: ""; position: absolute; left: 0; top: .9em; width: .6em; height: 2px; background: var(--mc); }
+.member-bio { grid-column: 1 / -1; padding: clamp(24px, 4vw, 56px); line-height: 2.1; border-top: 1px solid var(--line); }
+.member-name-ja { display: block; font-size: 12px; color: var(--text-sub); margin-top: 2px; }
+.member-detail-info dl { display: grid; grid-template-columns: auto 1fr; gap: 14px 24px; margin: 32px 0; font-size: 14px; line-height: 1.8; }
+.member-detail-info dt { font-family: var(--font-en); letter-spacing: .15em; color: var(--text-sub); font-size: 12px; padding-top: 3px; }
+.member-detail-info dd { margin: 0; }
+.member-detail-info .message { margin-bottom: 24px; white-space: pre-wrap; }
+
+/* ---------- フッター ---------- */
+#site-footer { border-top: 1px solid var(--line); margin-top: 80px; }
+.footer-inner {
+  max-width: var(--max); margin: 0 auto; padding: 64px var(--gutter) 40px;
+  display: grid; gap: 32px; justify-items: center; text-align: center;
+}
+.footer-logo img { height: 36px; width: auto; }
+.footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 28px; font-family: var(--font-en); font-size: 13px; letter-spacing: .15em; }
+.footer-nav a:hover { color: var(--accent); }
+.copyright { font-size: 11px; color: var(--text-sub); font-family: var(--font-en); letter-spacing: .1em; }
+
+/* ---------- アニメーション ---------- */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s, transform 1s cubic-bezier(.2,.7,.2,1); }
+.reveal.is-in { opacity: 1; transform: none; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ---------- スマホ ---------- */
+@media (max-width: 767px) {
+  :root { --header-h: 60px; }
+  .mv-grid { grid-template-columns: 1fr; }
+  .mv-grid .movie-card:first-child { grid-row: auto; }
+  .news-item a, .news-article summary { grid-template-columns: auto 1fr; gap: 8px 12px; padding: 18px 0; }
+  .news-item p, .news-article summary p { grid-column: 1 / -1; }
+  .profile-top, .disc-item, .member-detail { grid-template-columns: 1fr; }
+  .group-photo { position: static; }
+  .member-grid { grid-template-columns: repeat(2, 1fr); }
+  .disc-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .sec-head { flex-wrap: wrap; }
+}

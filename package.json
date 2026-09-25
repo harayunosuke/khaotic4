@@ -1,0 +1,7 @@
+{
+  "name": "khaoticfour",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Khaotic4 official website (static). middleware.js で Basic 認証をかけている。npm の依存は持たない。"
+}

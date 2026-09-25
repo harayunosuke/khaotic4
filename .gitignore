@@ -1,0 +1,14 @@
+# 元素材（サイトでは縮小・整理済みのものを使用）
+_素材ボックス/
+
+# 100MB超のため GitHub に置けない（MV は YouTube 埋め込みで再生）
+assets/videos/mv_chaos_kakumeika.mp4
+
+# OS のゴミファイル
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 別プロジェクト（参考資料）。このサイトには含めない
+khaoticfour-main/
+khaoticfour-main.zip

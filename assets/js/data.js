@@ -541,7 +541,36 @@ Again and again
 
 フィルター`,
     },
-    { title: "生成", type: "Digital Single", date: "", jacket: "assets/images/discography/07_seisei.jpg", tracks: [], links: {} },
+    {
+      title: "生成",
+      type: "Digital Single",
+      date: "2026.09.28",
+      jacket: "assets/images/discography/07_seisei.jpg",
+      credit: "作詞：畑田裕二　作曲：畑田裕二",
+      youtubeId: "o9GLdaR0bEM", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=o9GLdaR0bEM" },
+      lyrics: `何にもないですと 笑って生きてきた
+何にもないほうが 傷つかないから
+才能がないんじゃない
+星に願うのも 怖かっただけ
+
+たいていのことは できるよきっと
+欲しがることが全て I want you
+
+生成 生成 この世界 泳いでいけ
+欲しい未来 まだ誰も作ってない
+歌 ストーリー 今夜のごはん
+Say say やりたい！って言ったキミの勝ち
+
+生成 生成 今日も不格好で
+下手なままでいい 出してしまえばいい
+許可なんかなくたって 好き
+笑われたって 手ぶらよりずっといい
+
+完成じゃなくて生成でいい
+正解はいらない 世界がほしい`,
+    },
     { title: "Smoky Mode feat. YUNO", type: "Digital Single", date: "", jacket: "assets/images/discography/06_smoky_mode.jpg", tracks: [], links: {} },
     {
       title: "Questioning feat. KOKI",

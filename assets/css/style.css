@@ -343,6 +343,45 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
   * { animation: none !important; transition: none !important; }
 }
 
+/* ---------- ホバーエフェクト（クリックできるものすべて） ---------- */
+/* 触れる端末では hover が張り付くので、マウス操作のときだけ動かす */
+.member-card, .movie-card, .disc-tile, .gallery-item { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.member-card .ph img, .movie-card .ph img, .disc-tile .ph img, .gallery-item .ph img { transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .35s; }
+.movie-title, .disc-tile p { transition: color .2s; }
+.header-logo, .footer-logo { display: inline-block; transition: opacity .2s; }
+.modal-close { transition: transform .3s, color .2s; }
+.lyrics summary { transition: color .2s; }
+.menu-btn span { transition: transform .3s, top .3s, background .2s; }
+
+/* メンバーカード: 浮く + メンバーカラーの枠 + 「VIEW →」 */
+.member-card { padding: 8px 8px 12px; margin: -8px; width: calc(100% + 16px); transition: transform .35s cubic-bezier(.2,.7,.2,1), background .35s; }
+.member-card .member-photo { transition: outline-color .3s; outline: 3px solid transparent; outline-offset: -3px; }
+.member-name::after {
+  content: "VIEW →"; margin-left: auto; font-size: 11px; letter-spacing: .15em; color: var(--mc);
+  opacity: 0; transform: translateX(-8px); transition: opacity .3s, transform .3s;
+}
+
+@media (hover: hover) {
+  .member-card:hover { transform: translateY(-6px); background: rgba(255,255,255,.05); }
+  .member-card:hover .member-photo { outline-color: var(--mc); }
+  .member-card:hover .ph img { transform: scale(1.06); filter: brightness(1.08); }
+  .member-card:hover .member-name::after { opacity: 1; transform: none; }
+
+  .movie-card:hover, .disc-tile:hover { transform: translateY(-4px); }
+  .gallery-item:hover { transform: translateY(-3px); }
+  .movie-card:hover .ph img, .disc-tile:hover .ph img, .gallery-item:hover .ph img { filter: brightness(1.1); }
+  .movie-card:hover .movie-title, .disc-tile:hover p { color: var(--accent); }
+
+  .header-logo:hover, .footer-logo:hover { opacity: .7; }
+  .menu-btn:hover span { background: var(--accent); }
+  .modal-close:hover { transform: rotate(90deg); color: var(--accent); }
+  .lyrics summary:hover { color: var(--accent); }
+}
+
+/* キーボード操作でも分かるように */
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.member-card:focus-visible .member-name::after { opacity: 1; transform: none; }
+
 /* ---------- スマホ ---------- */
 @media (max-width: 767px) {
   :root { --header-h: 60px; }

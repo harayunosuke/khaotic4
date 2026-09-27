@@ -313,10 +313,13 @@
     const works = [].concat(m.works || []);
     const rows = [
       ["COLOR", m.colorName && `<span class="swatch"></span>${esc(m.colorName)}`],
+      ["BIRTHDAY", esc(m.birthday || "")],
       ["ROLE", esc(m.role || "")],
       ["FROM", esc(m.from || "")],
       ["SKILL", esc(m.skill || "")],
       ["WORKS", works.length ? `<ul class="works">${works.map((w) => `<li>${esc(w)}</li>`).join("")}</ul>` : ""],
+      ["LIKE", esc(m.like || "")],
+      ["DISLIKE", esc(m.dislike || "")],
     ].filter(([, v]) => v);
     openModal(
       `<div class="member-detail" style="--mc:${esc(m.color || "#fff")}">

@@ -497,7 +497,7 @@ Beyond the Surface`,
       title: "カオス革命家",
       type: "Digital Single",
       date: "2026.09.28",
-      jacket: "assets/images/discography/13_chaos_kakumeika.jpg", // MV サムネイルを正方形に収めたもの
+      jacket: "assets/images/discography/13_chaos_kakumeika_v2.jpg",
       youtubeId: "v9j6pbR5cDk", // ▶ で再生（Official Music Video）
       tracks: [],
       links: { youtube: "https://www.youtube.com/watch?v=v9j6pbR5cDk" },

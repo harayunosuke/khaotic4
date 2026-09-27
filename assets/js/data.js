@@ -280,7 +280,7 @@ window.SITE = {
       youtubeId: "A-MHdl6W6J4",
       video: "",
       thumb: "",
-      featured: true,
+      featured: false, // HOME の MUSIC VIDEO 欄には出さない（MOVIE には表示）
     },
     {
       title: "めっちゃいい feat. RIN",

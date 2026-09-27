@@ -331,6 +331,7 @@
       ["FROM", esc(m.from || "")],
       ["SKILL", esc(m.skill || "")],
       ["WORKS", works.length ? `<ul class="works">${works.map((w) => `<li>${esc(w)}</li>`).join("")}</ul>` : ""],
+      ["AWARDS", [].concat(m.awards || []).length ? `<ul class="works">${[].concat(m.awards).map((w) => `<li>${esc(w)}</li>`).join("")}</ul>` : ""],
       ["LIKE", esc(m.like || "")],
       ["DISLIKE", esc(m.dislike || "")],
     ].filter(([, v]) => v);

@@ -412,6 +412,32 @@ Beyond the Surface`,
       youtubeId: "v9j6pbR5cDk", // ▶ で再生（Official Music Video）
       tracks: [],
       links: { youtube: "https://www.youtube.com/watch?v=v9j6pbR5cDk" },
+      // 歌詞は公式MVの字幕（手動作成）より
+      lyrics: `カオス！ケイオス！カオティック！
+光年って単位じゃ　測れない道
+今まで散々歩いてきた
+ここから先は地図もない
+（行くよ！）
+
+カオス！ケイオス！カオティック！
+世界(カオス)はめちゃくちゃ美しい
+自転も公転も　止まるほどの愛
+大袈裟じゃないよ
+夜明けはこの手で　連れてくるから
+ついてきて俺らに
+エポックメイカー
+カオス革命家
+
+カオス！ケイオス！カオティック！
+秩序の中にもカオス
+常識やルールの中でも
+まだ誰も知らない場所へ
+
+カオス！ケイオス！カオティック！
+めちゃくちゃなくらいがちょうどいい
+夜明けの向こうへ走り出せ
+エポックメイカー
+カオス革命家`,
     },
     { title: "KHAOS", type: "1st Virtual Album", date: "", jacket: "assets/images/discography/10_khaos.jpg", tracks: [], links: {} },
     {

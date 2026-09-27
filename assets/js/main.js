@@ -201,6 +201,7 @@
       `<div class="video-wrap"><iframe src="https://www.youtube.com/embed/${encodeURIComponent(d.youtubeId)}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
        <div class="song-info">
          <h3>${esc(d.title)}</h3>
+         ${d.credit ? `<p class="disc-credit">${esc(d.credit)}</p>` : ""}
          ${d.lyrics ? `<div class="lyrics-body">${lyricsHtml(d.lyrics)}</div>` : ""}
        </div>`,
       "is-video is-song"
@@ -217,6 +218,7 @@
         <div class="disc-info">
           <span class="cat">${esc(d.type)}</span>
           <h3>${esc(d.title)}</h3>
+          ${d.credit ? `<p class="disc-credit">${esc(d.credit)}</p>` : ""}
           ${d.date ? `<time>${esc(d.date)} Release</time>` : ""}
           ${d.tracks?.length ? `<ol class="tracks">${d.tracks.map((t) => `<li>${esc(t)}</li>`).join("")}</ol>` : ""}
           ${d.youtubeId || links ? `<div class="disc-links">${d.youtubeId ? `<a class="btn-sm btn-play" href="#" data-disc="${i}">▶ PLAY</a>` : ""}${links}</div>` : ""}

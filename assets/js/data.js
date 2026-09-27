@@ -187,7 +187,61 @@ window.SITE = {
   // date / tracks / links は分かり次第入れてください（空欄は非表示）。
   discography: [
     { title: "KHAOS", type: "1st Virtual Album", date: "", jacket: "assets/images/discography/10_khaos.jpg", tracks: [], links: {} },
-    { title: "フィルター (covered by YUNO)", type: "Cover", date: "", jacket: "assets/images/discography/08_filter_covered_by_yuno.jpg", tracks: [], links: {} },
+    {
+      title: "フィルター (covered by YUNO)",
+      type: "Cover",
+      date: "2026.09.28",
+      jacket: "assets/images/discography/08_filter_covered_by_yuno.jpg",
+      credit: "作詞：KOKI　作曲：畑田裕二",
+      youtubeId: "EeyoC0ZVKBg", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=EeyoC0ZVKBg" },
+      lyrics: `[Verse1]
+まばたき　三秒　止めて笑う
+これが仕事　これが呼吸
+かわいいも　かっこいいも
+言われた分だけ　ほんとになる
+
+[Verse2]
+嘘つきって　呼んでいいよ
+裏側　探しても　もう　ないよ
+剥がしても　ああメビウス
+ぜんぶ　ぜんぶ　僕の顔
+
+[Pre Chorus]
+君のスマホの中
+今日も　更新されてく
+何度目の僕か
+数えるのは　やめた
+
+[Chorus]
+フィルター　take me further
+僕は　僕の　idol
+光ごと　抱きしめて
+これが僕だよ　文句ある？
+フィルター　眩しいまま
+Don’t turn it off
+君の見てる僕が
+いちばん　僕なんだって
+
+[Bridge]
+本物？　偽物？
+どっちでも　踊れる
+嘘みたいなステージで
+本気で　やってるから　本当
+
+[Last Chorus]
+フィルター　take me further
+届かない僕まで
+生まれ変わる　三分間
+何度でも　what if
+フィルター　眩しいまま
+Again and again
+君が呼んだ名前で
+僕は　僕になる
+
+フィルター`,
+    },
     { title: "生成", type: "Digital Single", date: "", jacket: "assets/images/discography/07_seisei.jpg", tracks: [], links: {} },
     { title: "Smoky Mode feat. YUNO", type: "Digital Single", date: "", jacket: "assets/images/discography/06_smoky_mode.jpg", tracks: [], links: {} },
     { title: "Questioning feat. KOKI", type: "Digital Single", date: "", jacket: "assets/images/discography/05_questioning.jpg", tracks: [], links: {} },

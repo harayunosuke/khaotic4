@@ -312,6 +312,9 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
 .member-detail-info .works li::before { content: ""; position: absolute; left: 0; top: .9em; width: .6em; height: 2px; background: var(--mc); }
 .member-bio { grid-column: 1 / -1; padding: clamp(24px, 4vw, 56px); line-height: 2.1; border-top: 1px solid var(--line); }
 .member-name-ja { display: block; font-size: 12px; color: var(--text-sub); margin-top: 2px; }
+.member-facts { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 12px 0 8px; font-size: 12px; line-height: 1.6; }
+.member-facts dt { font-family: var(--font-en); font-size: 10px; letter-spacing: .12em; color: var(--text-sub); padding-top: 2px; }
+.member-facts dd { margin: 0; }
 .member-detail-info dl { display: grid; grid-template-columns: auto 1fr; gap: 14px 24px; margin: 32px 0; font-size: 14px; line-height: 1.8; }
 .member-detail-info dt { font-family: var(--font-en); letter-spacing: .15em; color: var(--text-sub); font-size: 12px; padding-top: 3px; }
 .member-detail-info dd { margin: 0; }

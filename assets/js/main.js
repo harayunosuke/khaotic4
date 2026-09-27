@@ -160,12 +160,23 @@
       <p class="movie-title">${esc(m.title)}</p>
     </a>`;
 
-  const memberCard = (m) => `
+  // detail = true のとき（PROFILE ページ）は誕生日・好き・嫌いもカードに表示
+  const memberCard = (m, detail = false) => {
+    const facts = detail
+      ? [
+          ["BIRTHDAY", m.birthday],
+          ["LIKE", m.like],
+          ["DISLIKE", m.dislike],
+        ].filter(([, v]) => v)
+      : [];
+    return `
     <button class="member-card" data-member="${esc(m.id)}" style="--mc:${esc(m.color || "#fff")}">
       ${img(m.photo, m.name, "member-photo")}
       <span class="member-name">${esc(m.name)}</span>
       ${m.nameJa ? `<span class="member-name-ja">${esc(m.nameJa)}</span>` : ""}
+      ${facts.length ? `<dl class="member-facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}
     </button>`;
+  };
 
   // 歌詞: [Intro] などの行は小見出し、空行で段落を分ける
   const lyricsHtml = (text = "") =>
@@ -261,7 +272,7 @@
   fill("#top-news", sortedNews().slice(0, 5).map((n) => newsItem(n, n.i)).join(""));
   fill("#top-profile-text", paras(S.group.description).join(""));
   fill("#top-profile-photo", img(S.group.photo, S.name, "group-photo"));
-  fill("#top-members", S.members.map(memberCard).join(""));
+  fill("#top-members", S.members.map((m) => memberCard(m)).join(""));
   fill("#top-disc", S.discography.map(discTile).join(""));
   // トップの GALLERY: 先頭から8枚（PHOTO → LIVE の順）
   fill("#top-gallery", allPhotos().slice(0, 8).map(galleryItem).join(""));
@@ -304,7 +315,7 @@
   /* ---------- PROFILE ページ ---------- */
   fill("#group-photo", img(S.group.photo, S.name, "group-photo"));
   fill("#group-text", `<h2 class="group-name">${esc(S.name)}</h2>${paras(S.group.description).join("")}`);
-  fill("#member-list", S.members.map(memberCard).join(""));
+  fill("#member-list", S.members.map((m) => memberCard(m, true)).join(""));
 
   document.addEventListener("click", (e) => {
     const c = e.target.closest("[data-member]");

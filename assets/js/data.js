@@ -43,6 +43,14 @@ window.SITE = {
     {
       date: "2026.09.28",
       category: "MUSIC",
+      title: "「Smoky Mode feat. YUNO」公開",
+      body: "YUNO をフィーチャーした「Smoky Mode」を公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
+      image: "assets/images/discography/06_smoky_mode.jpg",
+      song: "Smoky Mode feat. YUNO", // DISCOGRAPHY の曲名。▶ PLAY ボタンが付きます
+    },
+    {
+      date: "2026.09.28",
+      category: "MUSIC",
       title: "「めっちゃいい feat. RIN」公開",
       body: "「めっちゃいい feat. RIN」の新しい映像を YouTube で公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
       image: "assets/images/discography/03_meccha_ii.jpg",
@@ -654,7 +662,59 @@ Say say やりたい！って言ったキミの勝ち
 完成じゃなくて生成でいい
 正解はいらない 世界がほしい`,
     },
-    { title: "Smoky Mode feat. YUNO", type: "Digital Single", date: "", jacket: "assets/images/discography/06_smoky_mode.jpg", tracks: [], links: {} },
+    {
+      title: "Smoky Mode feat. YUNO",
+      type: "Digital Single",
+      date: "2026.09.28",
+      jacket: "assets/images/discography/06_smoky_mode.jpg",
+      credit: "作詞：畑田裕二　作曲：畑田裕二",
+      youtubeId: "lwADDIv3C6A", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=lwADDIv3C6A" },
+      lyrics: `コンビニ前 three AM
+衣装のままで cigarette
+Perfect skin は生成中
+でもこの目だけ still the truth
+
+盛れてない日も upload
+Bad mood まで全部 code
+「そんな君じゃ idol じゃない」
+Who made the rule? I don't know
+
+AI baby, make me shine
+Fake と real の border line
+どっちが僕か聞くなら
+Baby, both of them are mine
+
+[Bridge]
+もし filter が落ちても
+Would you still look at me?
+君の好きな僕は煙が嫌い
+キスより先にひとつのmint
+
+Render me again
+隠すためじゃない
+なりたい僕を
+僕が選びたい
+
+[Chorus]
+今日は Smoky Mode ベイビー
+汚れたままで pretty pretty
+
+今日は Smoky Mode レディー
+二人でひとつの identity
+
+Filter me, render me
+好きな僕を make it freely
+未来はまだ low quality
+But I move, I move, I move
+
+今日は Smoky Mode ピンキー
+ミントが消えるその前に
+
+No permission, no apology
+I generate my destiny`,
+    },
     {
       title: "Questioning feat. KOKI",
       type: "Digital Single",

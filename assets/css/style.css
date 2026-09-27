@@ -258,6 +258,21 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
 .disc-tile .cat { justify-self: start; margin-top: 4px; }
 .disc-tile p { font-size: 14px; font-weight: 500; line-height: 1.5; }
 .disc-tile:hover .ph img { transform: scale(1.05); }
+.disc-tile-img { position: relative; }
+.disc-tile-img .play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 48px; height: 48px; background: rgba(0,0,0,.45); color: #fff; }
+.disc-tile:hover .play { background: var(--accent); border-color: var(--accent); }
+
+/* 歌詞 */
+.btn-play { border-color: var(--accent); }
+.lyrics { margin-top: 24px; border-top: 1px solid var(--line); }
+.lyrics summary { cursor: pointer; padding: 14px 0; font-family: var(--font-en); letter-spacing: .2em; font-size: 13px; list-style: none; }
+.lyrics summary::-webkit-details-marker { display: none; }
+.lyrics summary::after { content: " +"; }
+.lyrics[open] summary::after { content: " −"; }
+.lyrics-body p { margin: 0 0 1.4em; line-height: 2; }
+.ly-head { display: inline-block; font-family: var(--font-en); font-size: 11px; letter-spacing: .15em; color: var(--text-sub); margin-bottom: 2px; }
+.song-info { clear: both; background: var(--bg-2); padding: clamp(24px, 4vw, 48px); }
+.song-info h3 { font-family: var(--font-en); font-size: clamp(22px, 3vw, 32px); margin-bottom: 24px; }
 
 /* ---------- GALLERY ---------- */
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }

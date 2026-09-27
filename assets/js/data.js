@@ -180,7 +180,61 @@ window.SITE = {
     { title: "Smoky Mode feat. YUNO", type: "Digital Single", date: "", jacket: "assets/images/discography/06_smoky_mode.jpg", tracks: [], links: {} },
     { title: "Questioning feat. KOKI", type: "Digital Single", date: "", jacket: "assets/images/discography/05_questioning.jpg", tracks: [], links: {} },
     { title: "それって、風情 feat. RINTARO", type: "Digital Single", date: "", jacket: "assets/images/discography/04_sorette_fuzei.jpg", tracks: [], links: {} },
-    { title: "めっちゃいい feat. RIN", type: "Digital Single", date: "", jacket: "assets/images/discography/03_meccha_ii.jpg", tracks: [], links: {} },
+    {
+      title: "めっちゃいい feat. RIN",
+      type: "Digital Single",
+      date: "2026.08.20",
+      jacket: "assets/images/discography/03_meccha_ii.jpg",
+      youtubeId: "9HPdVRRLwoQ", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=9HPdVRRLwoQ" },
+      // [Intro] などの行は小見出しとして表示されます
+      lyrics: `[Intro]
+（めっちゃ）（so good）
+（めっちゃ）（so good）
+
+[Verse1]
+朝のコンビニ　新作のヤツ
+ノープラン　遊びの約束
+笑い方　ちょっと変わってる
+そういうの　ぜんぶ　めっちゃいい↑
+
+[Verse2]
+言い出せなくて　飲み込んだ夜
+一人だと　考えすぎちゃう
+でも寝て起きたら　解決
+まとめて　ぜんぶ　めっちゃいい↑
+
+[Pre Chorus]
+辞書には　載ってない
+このモヤモヤも　ドキドキも
+だから　とにかくでかい言葉で
+ふたり　笑うように！
+
+[Chorus]
+めっちゃいい　so good
+言えないことは　いいって　言う
+めっちゃいい　so good
+重すぎたら走れないでしょ？
+きいれいも　きたないも
+全部　Alright
+今日を　今日を
+めっちゃいいって　ことにしよう！
+
+[Chorus]
+めっちゃいい　so good
+知らないことも　いいって　言う
+めっちゃいい　so good
+知りすぎても　つまらないでしょ？
+ごめんね　ありがと
+全部　Alright
+だから　だから
+よかったって　ことにしない？
+
+[Outro: male chorus]
+（なんか）（めっちゃ）
+（ことにしない？）`,
+    },
     { title: "カオティックFour", type: "Digital Single", date: "", jacket: "assets/images/discography/02_khaotic_four.jpg", tracks: [], links: {} },
     { title: "フィルター", type: "Digital Single", date: "", jacket: "assets/images/discography/01_filter.jpg", tracks: [], links: {} },
   ],
@@ -196,6 +250,15 @@ window.SITE = {
       category: "MV",
       youtubeId: "",
       video: "assets/videos/mv_chaos_kakumeika.mp4",
+      thumb: "",
+      featured: true,
+    },
+    {
+      title: "めっちゃいい feat. RIN",
+      date: "2026.08.20",
+      category: "MUSIC",
+      youtubeId: "9HPdVRRLwoQ",
+      video: "",
       thumb: "",
       featured: true,
     },

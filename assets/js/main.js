@@ -131,6 +131,12 @@
       playVideo(t.dataset);
       return;
     }
+    const dc = e.target.closest("[data-disc]");
+    if (dc) {
+      e.preventDefault();
+      openSong(S.discography[+dc.dataset.disc]);
+      return;
+    }
     const z = e.target.closest("[data-zoom]");
     if (z) {
       e.preventDefault();
@@ -161,7 +167,35 @@
       ${m.nameJa ? `<span class="member-name-ja">${esc(m.nameJa)}</span>` : ""}
     </button>`;
 
-  const discItem = (d) => {
+  // 歌詞: [Intro] などの行は小見出し、空行で段落を分ける
+  const lyricsHtml = (text = "") =>
+    text
+      .trim()
+      .split(/\n\s*\n/)
+      .map(
+        (block) =>
+          `<p>${block
+            .split("\n")
+            .map((line) => {
+              const h = line.match(/^\[(.+)\]$/);
+              return h ? `<span class="ly-head">${esc(h[1])}</span>` : esc(line);
+            })
+            .join("<br>")}</p>`
+      )
+      .join("");
+
+  // 曲を再生 + 歌詞を並べて表示するポップアップ
+  const openSong = (d) =>
+    openModal(
+      `<div class="video-wrap"><iframe src="https://www.youtube.com/embed/${encodeURIComponent(d.youtubeId)}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+       <div class="song-info">
+         <h3>${esc(d.title)}</h3>
+         ${d.lyrics ? `<div class="lyrics-body">${lyricsHtml(d.lyrics)}</div>` : ""}
+       </div>`,
+      "is-video is-song"
+    );
+
+  const discItem = (d, i) => {
     const links = Object.entries(d.links || {})
       .filter(([, v]) => v)
       .map(([k, v]) => `<a class="btn-sm" href="${esc(v)}" target="_blank" rel="noopener">${k.toUpperCase()}</a>`)
@@ -174,15 +208,16 @@
           <h3>${esc(d.title)}</h3>
           ${d.date ? `<time>${esc(d.date)} Release</time>` : ""}
           ${d.tracks?.length ? `<ol class="tracks">${d.tracks.map((t) => `<li>${esc(t)}</li>`).join("")}</ol>` : ""}
-          ${links ? `<div class="disc-links">${links}</div>` : ""}
+          ${d.youtubeId || links ? `<div class="disc-links">${d.youtubeId ? `<a class="btn-sm btn-play" href="#" data-disc="${i}">▶ PLAY</a>` : ""}${links}</div>` : ""}
+          ${d.lyrics ? `<details class="lyrics"><summary>LYRICS</summary><div class="lyrics-body">${lyricsHtml(d.lyrics)}</div></details>` : ""}
         </div>
       </article>`;
   };
 
   // トップ用: ジャケットだけのタイル
-  const discTile = (d) => `
-    <a class="disc-tile" href="${ROOT}discography/index.html">
-      ${img(d.jacket, d.title, "disc-jacket")}
+  const discTile = (d, i) => `
+    <a class="disc-tile" href="${d.youtubeId ? "#" : `${ROOT}discography/index.html`}" ${d.youtubeId ? `data-disc="${i}"` : ""}>
+      <div class="disc-tile-img">${img(d.jacket, d.title, "disc-jacket")}${d.youtubeId ? `<span class="play"></span>` : ""}</div>
       <span class="cat">${esc(d.type)}</span>
       <p>${esc(d.title)}</p>
     </a>`;

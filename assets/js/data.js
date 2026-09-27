@@ -70,7 +70,7 @@ window.SITE = {
       romaji: "Yunosuke Hara",
       color: "#f5c518",
       colorName: "黄（Yellow）",
-      birthday: "",
+      birthday: "7月9日",
       like: "トマトソース",
       dislike: "図しか載ってない組み立て説明書",
       role: "リーダー ／ 手を動かす人（木工・造形・空間）",

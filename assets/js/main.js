@@ -189,6 +189,12 @@
   const allPhotos = () => (S.gallery || []).flatMap((g) => g.files.map((f) => ({ cat: g.category, src: g.dir + f })));
   const galleryItem = (ph) => `<a class="gallery-item" href="#" data-zoom="${esc(p(ph.src))}">${img(ph.src, ph.cat)}</a>`;
 
+  const creditsHtml = () =>
+    (S.credits || [])
+      .filter((c) => c.names?.length)
+      .map((c) => `<dt>${esc(c.label)}</dt><dd>${c.names.map(esc).join(" ／ ")}</dd>`)
+      .join("");
+
   const fill = (sel, html) => {
     const el = $(sel);
     if (el) el.innerHTML = html;
@@ -223,6 +229,7 @@
   fill("#top-profile-text", paras(S.group.description).join(""));
   fill("#top-profile-photo", img(S.group.photo, S.name, "group-photo"));
   fill("#top-members", S.members.map(memberCard).join(""));
+  fill("#top-credits", creditsHtml());
   fill("#top-disc", S.discography.map(discTile).join(""));
   // トップの GALLERY: 先頭から8枚（PHOTO → LIVE の順）
   fill("#top-gallery", allPhotos().slice(0, 8).map(galleryItem).join(""));
@@ -266,6 +273,7 @@
   fill("#group-photo", img(S.group.photo, S.name, "group-photo"));
   fill("#group-text", `<h2 class="group-name">${esc(S.name)}</h2>${paras(S.group.description).join("")}`);
   fill("#member-list", S.members.map(memberCard).join(""));
+  fill("#credits", creditsHtml());
 
   document.addEventListener("click", (e) => {
     const c = e.target.closest("[data-member]");

@@ -163,6 +163,12 @@ window.SITE = {
     },
   ],
 
+  /* ---------- CREDITS ---------- */
+  // メンバー一覧の下に表示。役割ごとに名前を並べる（増やすときは行を追加）
+  credits: [
+    { label: "SUPPORT", names: ["畑田裕二"] },
+  ],
+
   /* ---------- DISCOGRAPHY ---------- */
   // 上から順に表示されます（新しいものを上に）。
   // type: "Single" | "Digital Single" | "EP" | "Album" | "Cover"

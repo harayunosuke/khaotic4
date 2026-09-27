@@ -166,7 +166,7 @@ window.SITE = {
   /* ---------- CREDITS ---------- */
   // 全ページのフッターに「Support by 畑田裕二」のように小さく表示（増やすときは行を追加）
   credits: [
-    { label: "Support", names: ["畑田裕二"] },
+    { label: "Support", names: ["畑田裕二", "東京大学カオスキャンプ"] },
   ],
 
   /* ---------- DISCOGRAPHY ---------- */

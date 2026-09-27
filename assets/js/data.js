@@ -617,11 +617,12 @@ Questioning`,
     {
       title: "めっちゃいい feat. RIN",
       type: "Digital Single",
-      date: "2026.08.20",
+      date: "2026.09.28",
       jacket: "assets/images/discography/03_meccha_ii.jpg",
-      youtubeId: "9HPdVRRLwoQ", // ▶ で再生（YouTube 埋め込み）
+      credit: "作詞：畑田裕二　作曲：畑田裕二",
+      youtubeId: "v9Qvic_79wU", // ▶ で再生（YouTube 埋め込み）
       tracks: [],
-      links: { youtube: "https://www.youtube.com/watch?v=9HPdVRRLwoQ" },
+      links: { youtube: "https://www.youtube.com/watch?v=v9Qvic_79wU" },
       // [Intro] などの行は小見出しとして表示されます
       lyrics: `[Intro]
 （めっちゃ）（so good）

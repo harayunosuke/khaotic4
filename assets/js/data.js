@@ -263,6 +263,7 @@ window.SITE = {
   // YouTube の場合: youtubeId を入れる（サムネイルは自動取得）
   // 手元の動画ファイルの場合: video にパスを入れる（thumb が無ければ動画の1コマを表示）
   // featured: true にしたものがトップの MUSIC VIDEO 欄に並びます（最大3本）。
+  // ※ MOVIE に載せるのは、サイト管理者が指定した動画だけ。曲の YouTube は DISCOGRAPHY 側に付ける。
   movies: [
     {
       title: "カオス革命家 (Music Video)",
@@ -281,15 +282,6 @@ window.SITE = {
       video: "",
       thumb: "",
       featured: false, // HOME の MUSIC VIDEO 欄には出さない（MOVIE には表示）
-    },
-    {
-      title: "めっちゃいい feat. RIN",
-      date: "2026.08.20",
-      category: "MUSIC",
-      youtubeId: "9HPdVRRLwoQ",
-      video: "",
-      thumb: "",
-      featured: false, // MV ではないので MUSIC VIDEO 欄には出さない
     },
   ],
 

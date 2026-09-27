@@ -186,6 +186,198 @@ window.SITE = {
   // type: "Single" | "Digital Single" | "EP" | "Album" | "Cover"
   // date / tracks / links は分かり次第入れてください（空欄は非表示）。
   discography: [
+    {
+      title: "Surface (feat. YUNO)",
+      type: "Digital Single",
+      date: "2026.09.28",
+      jacket: "assets/images/discography/11_surface.jpg",
+      credit: "作詞：YUNO　作曲：YUNO",
+      youtubeId: "IjafzyZpvUM", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=IjafzyZpvUM" },
+      lyrics: `[Intro]
+Surface
+What do you see?
+Turn it around
+Look at me now
+
+Oh-oh
+Beyond the surface
+
+[Verse 1]
+光が当たる　その場所だけ
+僕らは「すべて」って呼んでいた
+綺麗な輪郭　なぞるほどに
+分かったような顔をして
+
+One side, one sight
+切り取った世界
+正しいなんて　誰が決めた？
+
+見えない場所に伸ばした thought
+そこにもきっと続きがある
+
+[Pre-Chorus]
+近づくほど　見えなくなる
+離れるほど　気づいていく
+
+表と裏を繋ぐように
+想像して
+
+Three, two, one
+Flip it
+
+[Chorus]
+Surface, Surface
+見えてるものだけじゃない
+
+Turn it, turn it
+その向こうを想像したい
+
+光の裏に隠れた shadow
+知らないままじゃ終われないよ
+
+Surface, Surface
+ひとつの角度を越えて
+
+You make me see it differently
+You make me see it differently
+
+見えない君を考えた瞬間
+目の前の君まで変わっていく
+
+Beyond the Surface
+
+[Post-Chorus]
+Sur-Sur-Surface
+Turn it around
+
+Sur-Sur-Surface
+Look at it now
+
+Front side, back side
+Change your point of view
+
+Beyond, beyond
+The Surface
+
+[Verse 2]
+ひとつの写真　一秒の scene
+それだけじゃ語れない story
+
+知ってるつもり
+分かってるつもり
+その「つもり」を壊してみたい
+
+Black or white
+そんな単純じゃない
+
+Right or wrong
+その間にも世界
+
+僕には見えない君の景色
+君には見えない僕の景色
+
+[Pre-Chorus]
+答え合わせはいらない
+分からないから考えたい
+
+触れられないその裏側が
+今を変えてく
+
+Three, two, one
+Flip it
+
+[Chorus]
+Surface, Surface
+見えてるものだけじゃない
+
+Turn it, turn it
+その向こうを想像したい
+
+光の裏に隠れた shadow
+知らないままじゃ終われないよ
+
+Surface, Surface
+ひとつの角度を越えて
+
+You make me see it differently
+You make me see it differently
+
+見えない君を考えた瞬間
+目の前の君まで変わっていく
+
+Beyond the Surface
+
+[Rap]
+Wait
+What you see, what you know
+それはほんの one side
+
+視線ひとつで change the whole world
+同じ形でも different outline
+
+Front to the back
+Back to the front
+
+見えないものまで count it up
+
+I don't need the answer
+I just wanna wonder
+
+想像するたび
+世界は getting wider
+
+[Bridge]
+もしも全部が見えたなら
+僕らはもう考えないのかな
+
+分からない
+届かない
+だから手を伸ばせる
+
+I wanna know
+I wanna know
+
+でも全部を知ることより
+
+見えない何かがあることを
+忘れないでいたい
+
+[Final Chorus]
+Surface, Surface
+見えてる世界を越えて
+
+Turn it, turn it
+何度だって見つめ直して
+
+光も影も　表も裏も
+どちらかだけじゃ足りないから
+
+Surface, Surface
+ひとつじゃないその姿
+
+You make me see it differently
+Now I can see it differently
+
+見えない世界を想像したら
+目の前の景色が輝き出す
+
+Oh-oh
+Beyond the Surface
+
+[Outro]
+Sur-Sur-Surface
+Turn it around
+
+Sur-Sur-Surface
+Change your point of view
+
+見えているものの
+その向こうへ
+
+Beyond the Surface`,
+    },
     { title: "KHAOS", type: "1st Virtual Album", date: "", jacket: "assets/images/discography/10_khaos.jpg", tracks: [], links: {} },
     {
       title: "フィルター (covered by YUNO)",

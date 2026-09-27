@@ -543,7 +543,48 @@ Again and again
     },
     { title: "生成", type: "Digital Single", date: "", jacket: "assets/images/discography/07_seisei.jpg", tracks: [], links: {} },
     { title: "Smoky Mode feat. YUNO", type: "Digital Single", date: "", jacket: "assets/images/discography/06_smoky_mode.jpg", tracks: [], links: {} },
-    { title: "Questioning feat. KOKI", type: "Digital Single", date: "", jacket: "assets/images/discography/05_questioning.jpg", tracks: [], links: {} },
+    {
+      title: "Questioning feat. KOKI",
+      type: "Digital Single",
+      date: "2026.09.28",
+      jacket: "assets/images/discography/05_questioning.jpg",
+      credit: "作詞：畑田裕二　作曲：畑田裕二",
+      youtubeId: "4V3Eyf661pw", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=4V3Eyf661pw" },
+      lyrics: `問題！
+
+世界のことなら　よく知っている
+何年、何月、どこの誰
+身体が先に答えようとする
+正解のガクチカ　問われている
+
+一生子供でいたいと
+たぶんどこかで思っていた
+読まれた僕だけの問題
+「大人」の答えが分からない
+
+止まった時間が幾星霜
+深海で「何もしない」をしている
+
+CQ　確定ポイントが来ない
+主語が僕なのかさえ　まだ分からない
+CQ　問題文は続く　押せないままで
+まだ　聞いていたいんだ
+
+Questioning
+
+スマホケース　入れっぱなしの写真
+かわいく描きたくて　何度も消した
+誰にも頼まれていないことばっかり　覚えている
+
+CQ コンマ2秒予期して
+主語は僕なのかっていま　期待をしてる
+CQ Storyを予感して　押したら最後
+問題も答えもない　僕の話
+
+Questioning`,
+    },
     {
       title: "めっちゃいい feat. RIN",
       type: "Digital Single",

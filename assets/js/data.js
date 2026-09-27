@@ -678,7 +678,53 @@ Questioning`,
       tracks: [],
       links: { youtube: "https://www.youtube.com/watch?v=A-MHdl6W6J4" },
     },
-    { title: "フィルター", type: "Digital Single", date: "", jacket: "assets/images/discography/01_filter.jpg", tracks: [], links: {} },
+    {
+      title: "フィルター",
+      type: "Digital Single",
+      date: "2026.09.28",
+      jacket: "assets/images/discography/01_filter.jpg",
+      credit: "作詞：畑田裕二　作曲：畑田裕二",
+      youtubeId: "ZZ9l_3vjGPw", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=ZZ9l_3vjGPw" },
+      lyrics: `まばたき　三秒　止めて笑う
+これが仕事　これが呼吸
+かわいいも　かっこいいも
+言われた分だけ　ほんとになる
+
+嘘つきって　呼んでいいよ
+裏側　探しても　もう　ないよ
+剥がしても　ああメビウス
+ぜんぶ　ぜんぶ　僕の顔
+
+君のスマホの中
+今日も　更新されてく
+何度目の僕か
+数えるのは　やめた
+
+フィルター　take me further
+僕は　僕の　idol
+光ごと　抱きしめて
+これが僕だよ　文句ある？
+フィルター　眩しいまま
+Don’t turn it off
+君の見てる僕が
+いちばん　僕なんだって
+
+本物？　偽物？
+どっちでも　踊れる
+嘘みたいなステージで
+本気で　やってるから　本当
+
+フィルター　take me further
+届かない僕まで
+生まれ変わる　三分間
+何度でも　what if
+フィルター　眩しいまま
+Again and again
+君が呼んだ名前で
+僕は　僕になる`,
+    },
   ],
 
   /* ---------- MOVIE / MV ---------- */

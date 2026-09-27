@@ -247,7 +247,15 @@ window.SITE = {
 （なんか）（めっちゃ）
 （ことにしない？）`,
     },
-    { title: "カオティックFour", type: "Digital Single", date: "", jacket: "assets/images/discography/02_khaotic_four.jpg", tracks: [], links: {} },
+    {
+      title: "カオティックFour",
+      type: "Digital Single",
+      date: "2026.08.16",
+      jacket: "assets/images/discography/02_khaotic_four.jpg",
+      youtubeId: "A-MHdl6W6J4", // ▶ で再生（MV）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=A-MHdl6W6J4" },
+    },
     { title: "フィルター", type: "Digital Single", date: "", jacket: "assets/images/discography/01_filter.jpg", tracks: [], links: {} },
   ],
 
@@ -262,6 +270,15 @@ window.SITE = {
       category: "MV",
       youtubeId: "",
       video: "assets/videos/mv_chaos_kakumeika.mp4",
+      thumb: "",
+      featured: true,
+    },
+    {
+      title: "カオティックFour (Music Video)",
+      date: "2026.08.16",
+      category: "MV",
+      youtubeId: "A-MHdl6W6J4",
+      video: "",
       thumb: "",
       featured: true,
     },

@@ -43,46 +43,6 @@ window.SITE = {
     {
       date: "2026.09.28",
       category: "MUSIC",
-      title: "「Smoky Mode feat. YUNO」公開",
-      body: "YUNO をフィーチャーした「Smoky Mode」を公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
-      image: "assets/images/discography/06_smoky_mode.jpg",
-      song: "Smoky Mode feat. YUNO", // DISCOGRAPHY の曲名。▶ PLAY ボタンが付きます
-    },
-    {
-      date: "2026.09.28",
-      category: "MUSIC",
-      title: "「めっちゃいい feat. RIN」公開",
-      body: "「めっちゃいい feat. RIN」の新しい映像を YouTube で公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
-      image: "assets/images/discography/03_meccha_ii.jpg",
-      song: "めっちゃいい feat. RIN", // DISCOGRAPHY の曲名。▶ PLAY ボタンが付きます
-    },
-    {
-      date: "2026.09.28",
-      category: "MUSIC",
-      title: "「フィルター」公開",
-      body: "「フィルター」を公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
-      image: "assets/images/discography/01_filter.jpg",
-      song: "フィルター", // DISCOGRAPHY の曲名。▶ PLAY ボタンが付きます
-    },
-    {
-      date: "2026.09.28",
-      category: "MUSIC",
-      title: "「生成」公開",
-      body: "「生成」を公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
-      image: "assets/images/discography/07_seisei.jpg",
-      song: "生成", // DISCOGRAPHY の曲名。▶ PLAY ボタンが付きます
-    },
-    {
-      date: "2026.09.28",
-      category: "MUSIC",
-      title: "「Questioning feat. KOKI」公開",
-      body: "KOKI をフィーチャーした「Questioning」を公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
-      image: "assets/images/discography/05_questioning.jpg",
-      song: "Questioning feat. KOKI", // DISCOGRAPHY の曲名。▶ PLAY ボタンが付きます
-    },
-    {
-      date: "2026.09.28",
-      category: "MUSIC",
       title: "「それって、風情 feat. RINTARO」公開",
       body: "RINTARO をフィーチャーした「それって、風情」を公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
       image: "assets/images/discography/04_sorette_fuzei.jpg",
@@ -103,30 +63,6 @@ window.SITE = {
       body: "YUNO が作詞・作曲を手がけた新曲「Surface」を公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
       image: "assets/images/discography/11_surface.jpg",
       song: "Surface (feat. YUNO)", // DISCOGRAPHY の曲名。▶ PLAY ボタンが付きます
-    },
-    {
-      date: "2026.09.28",
-      category: "MUSIC",
-      title: "「フィルター (covered by YUNO)」公開",
-      body: "YUNO による「フィルター」のカバーを公開しました。 DISCOGRAPHY から歌詞と一緒にお聴きいただけます。",
-      image: "assets/images/discography/08_filter_covered_by_yuno.jpg",
-      song: "フィルター (covered by YUNO)", // DISCOGRAPHY の曲名。▶ PLAY ボタンが付きます
-    },
-    {
-      date: "2026.09.28",
-      category: "MUSIC",
-      title: "「カオス革命家」Music Video 公開",
-      body: "「カオス革命家」の Music Video を公開しました。MOVIE ページからご覧いただけます。",
-      image: "assets/images/gallery/live/live_03.jpg",
-      song: "カオス革命家",
-    },
-    {
-      date: "2026.08.16",
-      category: "MUSIC",
-      title: "「カオティックFour」Music Video 公開",
-      body: "「カオティックFour」の Music Video を公開しました。MOVIE と DISCOGRAPHY からご覧いただけます。",
-      image: "assets/images/discography/02_khaotic_four_v2.jpg",
-      song: "カオティックFour",
     },
   ],
 

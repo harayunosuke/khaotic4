@@ -49,6 +49,6 @@ A YouTube ID is the `xxxxxxxxxxx` part of `https://www.youtube.com/watch?v=xxxxx
 
 ## 更新が反映されないとき（キャッシュ対策）
 
-各 HTML の CSS / JS の読み込みに `?v=20260928o` のような版番号を付けています。
+各 HTML の CSS / JS の読み込みに `?v=20260928p` のような版番号を付けています。
 `data.js` などを更新したら、この番号を全ページ分（6ファイル）まとめて新しい日付に変えてください。
 番号が変わるとブラウザが古いファイルを使い回さず、必ず最新版を読み込みます。

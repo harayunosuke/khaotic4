@@ -187,6 +187,32 @@ window.SITE = {
   // date / tracks / links は分かり次第入れてください（空欄は非表示）。
   discography: [
     {
+      title: "近いがゆえにエグ彼方！",
+      type: "Digital Single",
+      date: "2026.09.28",
+      jacket: "assets/images/discography/12_chikai_ga_yue_ni.jpg",
+      youtubeId: "v58HBNKHcWY", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=v58HBNKHcWY" },
+      lyrics: `近いがゆえにエグ彼方！
+
+将来の夢は　いつの間にか聞かれなくなった
+かつての友達は　花屋になってなかった
+たくさん花を買って　部屋中に咲かせたかったのに
+家の裏の川は　川じゃなくて　名前もない用水路
+大人になったら　すぐに跨げてしまった
+船にのって　いつの日か太平洋へと　繰り出すつもりだったのに
+
+[サビ]
+近いがゆえにエグ彼方！
+
+教えてあげる
+絵画の楽園も　舵を切ったその先も　君と僕との心の距離も全て
+遠いようで　すぐそこにあるんだよ
+だから怖がらなくて大丈夫　理想の未来も目前
+次は君が誰かに教えて`,
+    },
+    {
       title: "Surface (feat. YUNO)",
       type: "Digital Single",
       date: "2026.09.28",
@@ -377,6 +403,15 @@ Change your point of view
 その向こうへ
 
 Beyond the Surface`,
+    },
+    {
+      title: "カオス革命家",
+      type: "Digital Single",
+      date: "2026.09.28",
+      jacket: "assets/images/discography/13_chaos_kakumeika.jpg", // MV サムネイルを正方形に収めたもの
+      youtubeId: "v9j6pbR5cDk", // ▶ で再生（Official Music Video）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=v9j6pbR5cDk" },
     },
     { title: "KHAOS", type: "1st Virtual Album", date: "", jacket: "assets/images/discography/10_khaos.jpg", tracks: [], links: {} },
     {

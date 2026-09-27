@@ -151,6 +151,12 @@
         <time>${esc(n.date)}</time><span class="cat">${esc(n.category)}</span><p>${esc(n.title)}</p>
       </a>
     </li>`;
+  // ニュースに曲が紐づいていれば ▶ PLAY（歌詞付きプレイヤー）と DISCOGRAPHY へのリンク
+  const newsSong = (n) => {
+    const i = n.song ? S.discography.findIndex((d) => d.title === n.song) : -1;
+    if (i < 0 || !S.discography[i].youtubeId) return "";
+    return `<div class="disc-links"><a class="btn-sm btn-play" href="#" data-disc="${i}">▶ PLAY</a><a class="btn-sm" href="${ROOT}discography/index.html">DISCOGRAPHY</a></div>`;
+  };
   const sortedNews = () => S.news.map((n, i) => ({ ...n, i })).sort((a, b) => b.date.localeCompare(a.date));
 
   const movieCard = (m) => `
@@ -294,7 +300,7 @@
       <li class="news-article" id="news-${n.i}" data-cat="${esc(n.category)}">
         <details>
           <summary><time>${esc(n.date)}</time><span class="cat">${esc(n.category)}</span><p>${esc(n.title)}</p></summary>
-          <div class="news-body">${n.image ? img(n.image, n.title, "news-image") : ""}<p>${esc(n.body)}</p></div>
+          <div class="news-body">${n.image ? img(n.image, n.title, "news-image") : ""}<p>${esc(n.body)}</p>${newsSong(n)}</div>
         </details>
       </li>`
       )

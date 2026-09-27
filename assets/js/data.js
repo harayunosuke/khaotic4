@@ -405,6 +405,52 @@ Change your point of view
 Beyond the Surface`,
     },
     {
+      title: "それって、風情 feat. RINTARO",
+      type: "Digital Single",
+      date: "2026.09.28",
+      jacket: "assets/images/discography/04_sorette_fuzei.jpg",
+      credit: "作詞：畑田裕二　作曲：畑田裕二",
+      youtubeId: "Lu1-XnlAa6w", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=Lu1-XnlAa6w" },
+      lyrics: `目覚ましを 止めた 記憶が ない
+シャツの 袖 すこし 濡れたまま
+自販機の ボタン 押し まちがえて
+まあ いいか って 飲んだ 月曜
+
+うまく いかない こと
+名前が つかない まま
+なんか 今日 だめだな の
+「なんか」 だけが 残る
+
+花屋で悩むロジック男　ああ風情！
+残り5%だけの充電　やあ風情！
+期限切れの5000ポイント　おお風情！
+もう 話せない あの子のこと　なんだか今日は
+それって、風情！
+
+フゼイ フゼイ なむ フゼイ ダブツ
+手を 叩く 理由なんて ない
+叩ければ あとから ついてくる
+ついて こなくても おどれる
+止められない 止めたくも ない
+目が 慣れて いくだけ
+君がついてこれなくても それも
+
+それって、風情！
+
+悲しい ほどでも ない
+平気とも 言い切れない
+この へんの 温度に
+ちょうどいい 言葉が ない
+
+誰も 見てない 生配信　ああ風情！
+改札前 キスするカップル　やあ風情！
+サブスク退会までの無限step　おお風情！
+なんにも 起きない この 夏　なんだか 今日も
+それって、風情！`,
+    },
+    {
       title: "カオス革命家",
       type: "Digital Single",
       date: "2026.09.28",
@@ -498,7 +544,6 @@ Again and again
     { title: "生成", type: "Digital Single", date: "", jacket: "assets/images/discography/07_seisei.jpg", tracks: [], links: {} },
     { title: "Smoky Mode feat. YUNO", type: "Digital Single", date: "", jacket: "assets/images/discography/06_smoky_mode.jpg", tracks: [], links: {} },
     { title: "Questioning feat. KOKI", type: "Digital Single", date: "", jacket: "assets/images/discography/05_questioning.jpg", tracks: [], links: {} },
-    { title: "それって、風情 feat. RINTARO", type: "Digital Single", date: "", jacket: "assets/images/discography/04_sorette_fuzei.jpg", tracks: [], links: {} },
     {
       title: "めっちゃいい feat. RIN",
       type: "Digital Single",

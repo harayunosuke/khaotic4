@@ -27,7 +27,7 @@ window.SITE = {
     poster: "assets/images/hero/hero-main.jpg",
     logo: "assets/images/logo/logo.png",    // ヒーローに大きく出すロゴ（空欄なら文字）
     catchcopy: "BREAK THE ORDER.",
-    playMovie: { video: "assets/videos/mv_chaos_kakumeika.mp4" }, // 「PLAY MOVIE」で再生（youtubeId でも可）
+    playMovie: { youtubeId: "v9j6pbR5cDk" }, // 「PLAY MOVIE」で再生（カオス革命家 MV）
   },
 
   /* ---------- NEWS ---------- */
@@ -41,7 +41,7 @@ window.SITE = {
       image: "",
     },
     {
-      date: "2026.09.20",
+      date: "2026.09.28",
       category: "MUSIC",
       title: "「カオス革命家」Music Video 公開",
       body: "「カオス革命家」の Music Video を公開しました。MOVIE ページからご覧いただけます。",
@@ -266,10 +266,10 @@ window.SITE = {
   movies: [
     {
       title: "カオス革命家 (Music Video)",
-      date: "2026.09.20",
+      date: "2026.09.28",
       category: "MV",
-      youtubeId: "",
-      video: "assets/videos/mv_chaos_kakumeika.mp4",
+      youtubeId: "v9j6pbR5cDk", // Official Music Video（YouTube 埋め込み）
+      video: "",
       thumb: "",
       featured: true,
     },

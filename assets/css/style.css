@@ -60,7 +60,9 @@ h1, h2, h3, p { margin: 0; }
   height: var(--header-h);
   transition: background .3s;
 }
-#site-header.is-scrolled { background: rgba(10,10,11,.85); backdrop-filter: blur(10px); }
+/* ぼかしは疑似要素に付ける（header 本体に付けると、中の全画面メニューが header の高さに閉じ込められる） */
+#site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity .3s; background: rgba(10,10,11,.85); backdrop-filter: blur(10px); }
+#site-header.is-scrolled::before { opacity: 1; }
 .header-inner {
   height: 100%; padding: 0 var(--gutter);
   display: flex; align-items: center; justify-content: space-between;
@@ -80,14 +82,15 @@ h1, h2, h3, p { margin: 0; }
 .global-nav {
   position: fixed; inset: 0; z-index: 55;
   background: var(--bg);
-  display: flex; flex-direction: column; justify-content: center; gap: 40px;
-  padding: 0 var(--gutter);
+  display: flex; flex-direction: column; justify-content: safe center; gap: 40px;
+  padding: calc(var(--header-h) + 16px) var(--gutter) 32px;
+  overflow-y: auto; /* 画面が低いときはスクロール */
   opacity: 0; visibility: hidden; transition: opacity .4s, visibility .4s;
 }
 .nav-open .global-nav { opacity: 1; visibility: visible; }
 .global-nav ul { display: grid; gap: 4px; }
 .global-nav a {
-  font-family: var(--font-en); font-size: clamp(36px, 8vw, 72px);
+  font-family: var(--font-en); font-size: clamp(28px, min(8vw, 8.5vh), 72px); /* 6項目が画面の高さに収まるサイズ */
   line-height: 1.15; letter-spacing: .04em; font-weight: 500;
   transition: color .2s;
 }

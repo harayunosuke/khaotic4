@@ -260,7 +260,7 @@ window.SITE = {
       youtubeId: "9HPdVRRLwoQ",
       video: "",
       thumb: "",
-      featured: true,
+      featured: false, // MV ではないので MUSIC VIDEO 欄には出さない
     },
   ],
 

@@ -64,6 +64,22 @@ window.SITE = {
       image: "assets/images/discography/11_surface.jpg",
       song: "Surface (feat. YUNO)", // DISCOGRAPHY の曲名。▶ PLAY ボタンが付きます
     },
+    {
+      date: "2026.09.28",
+      category: "MUSIC",
+      title: "「カオス革命家」Music Video 公開",
+      body: "「カオス革命家」の Music Video を公開しました。MOVIE ページからご覧いただけます。",
+      image: "assets/images/gallery/live/live_03.jpg",
+      song: "カオス革命家",
+    },
+    {
+      date: "2026.08.16",
+      category: "MUSIC",
+      title: "「カオティックFour」Music Video 公開",
+      body: "「カオティックFour」の Music Video を公開しました。MOVIE と DISCOGRAPHY からご覧いただけます。",
+      image: "assets/images/discography/02_khaotic_four_v2.jpg",
+      song: "カオティックFour",
+    },
   ],
 
   /* ---------- PROFILE ---------- */

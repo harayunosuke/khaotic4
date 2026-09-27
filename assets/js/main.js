@@ -272,7 +272,7 @@
   const featured = S.movies.filter((m) => m.featured).slice(0, 3);
   fill("#top-mv", featured.map(movieCard).join(""));
   fill("#top-news", sortedNews().slice(0, 5).map((n) => newsItem(n, n.i)).join(""));
-  fill("#top-profile-text", paras(S.group.description).join(""));
+  fill("#top-profile-text", paras(S.group.topDescription || S.group.description).join(""));
   fill("#top-profile-photo", img(S.group.photo, S.name, "group-photo"));
   fill("#top-members", S.members.map((m) => memberCard(m)).join(""));
   fill("#top-disc", S.discography.map(discTile).join(""));

@@ -57,7 +57,7 @@
     (S.goodsUrl ? `<li><a href="${esc(S.goodsUrl)}" target="_blank" rel="noopener">GOODS</a></li>` : "") +
     (S.fanclubUrl ? `<li><a href="${esc(S.fanclubUrl)}" target="_blank" rel="noopener">FANCLUB</a></li>` : "");
 
-  const logo = `<img src="${ROOT}assets/images/logo/logo_v2.png" alt="${esc(S.name)}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-text',textContent:'${esc(S.name)}'}))">`;
+  const logo = `<img src="${ROOT}assets/images/logo/logo_v3.png" alt="${esc(S.name)}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-text',textContent:'${esc(S.name)}'}))">`;
 
   const header = $("#site-header");
   if (header) {

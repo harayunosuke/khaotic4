@@ -849,6 +849,19 @@ Again and again
     },
   ],
 
+  /* ---------- DOCUMENTARY ---------- */
+  // 書き方は movies と同じ（youtubeId を入れるとサムネイルは自動取得）。
+  documentaries: [
+    {
+      title: "Khaotic4 DOCUMENTARY",
+      date: "2026.10.15",
+      category: "DOCUMENTARY",
+      youtubeId: "TJNtkdRwQTY",
+      video: "",
+      thumb: "",
+    },
+  ],
+
   /* ---------- GALLERY ---------- */
   // dir の中の files を並べます。写真を足すときはフォルダに入れて files に名前を追加。
   gallery: [

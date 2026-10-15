@@ -50,6 +50,7 @@
     ["PROFILE", "profile/", "profile"],
     ["DISCOGRAPHY", "discography/", "discography"],
     ["MOVIE", "movie/", "movie"],
+    ["DOCUMENTARY", "documentary/", "documentary"],
     ["GALLERY", "gallery/", "gallery"],
   ];
   const navHtml = () =>
@@ -285,6 +286,11 @@
   // トップの GALLERY: 先頭から8枚（PHOTO → LIVE の順）
   fill("#top-gallery", allPhotos().slice(0, 8).map(galleryItem).join(""));
   fill("#top-movie", [...S.movies].sort((a, b) => b.date.localeCompare(a.date)).map(movieCard).join(""));
+  const docs = [...(S.documentaries || [])].sort((a, b) => b.date.localeCompare(a.date));
+  fill("#top-documentary", docs.map(movieCard).join(""));
+
+  /* ---------- DOCUMENTARY ページ ---------- */
+  fill("#documentary-list", docs.map(movieCard).join(""));
 
   /* ---------- NEWS ページ ---------- */
   const newsList = $("#news-list");

@@ -858,7 +858,7 @@ Again and again
       category: "DOCUMENTARY",
       youtubeId: "svBsSW6cCJU",
       video: "",
-      thumb: "",
+      thumb: "assets/images/movie/documentary_vol1.jpg", // 差し替えたサムネイル
     },
   ],
 

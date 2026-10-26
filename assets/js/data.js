@@ -22,9 +22,9 @@ window.SITE = {
 
   /* ---------- トップのヒーロー ---------- */
   hero: {
-    video: "assets/videos/hero.mp4",        // PC用 背景ループ動画
-    videoSp: "assets/videos/hero-sp.mp4",   // スマホ用（軽量版）
-    poster: "assets/images/hero/hero-main.jpg",
+    video: "assets/videos/hero_v2.mp4",        // PC用 背景ループ動画
+    videoSp: "assets/videos/hero-sp_v2.mp4",   // スマホ用（軽量版）
+    poster: "assets/images/hero/hero-main_v2.jpg",
     logo: "assets/images/logo/logo_v3.png",    // ヒーローに大きく出すロゴ（空欄なら文字）
     catchcopy: "BREAK THE ORDER.",
     playMovie: { youtubeId: "v9j6pbR5cDk" }, // 「PLAY MOVIE」で再生（カオス革命家 MV）

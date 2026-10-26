@@ -116,6 +116,22 @@
   });
   document.addEventListener("keydown", (e) => e.key === "Escape" && closeModal());
 
+  /* ---------- AIの顔 ⇄ 本人の顔（スマホ用） ---------- */
+  // カーソルの無い端末（スマホ・タブレット）では、写真左上の「AI ⇄」をタップして切り替える。
+  // 詳細ポップアップが開かないよう、カードのクリックより先に受け取って止める。
+  const touchOnly = matchMedia("(hover: none)").matches;
+  document.addEventListener(
+    "click",
+    (e) => {
+      const t = e.target.closest(".photo-badge");
+      if (!t || !touchOnly) return;
+      e.preventDefault();
+      e.stopPropagation();
+      t.closest(".member-card").classList.toggle("show-real");
+    },
+    true
+  );
+
   const playVideo = ({ yt, video }) => {
     if (yt)
       return openModal(`<div class="video-wrap"><iframe src="https://www.youtube.com/embed/${encodeURIComponent(yt)}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>`, "is-video");
@@ -182,7 +198,7 @@
         ? `<div class="ph member-photo has-real" data-file="${esc(m.photo)}">
              <img class="photo-ai" src="${esc(p(m.photo))}" alt="${esc(m.name)}（AI生成）" loading="lazy">
              <img class="photo-real" src="${esc(p(m.photoReal))}" alt="${esc(m.name)}" loading="lazy">
-             <span class="photo-badge"><span class="b-ai">AI</span><span class="b-real">REAL</span></span>
+             <span class="photo-badge" role="button" tabindex="-1" aria-label="AIの顔と本人の顔を切り替える"><span class="b-ai">AI</span><span class="b-real">REAL</span><span class="b-swap" aria-hidden="true">⇄</span></span>
            </div>`
         : img(m.photo, m.name, "member-photo")}
       <span class="member-name">${esc(m.name)}</span>
@@ -418,6 +434,26 @@
       b.addEventListener("click", () => track.scrollBy({ left: track.clientWidth * 0.8 * +b.dataset.dir, behavior: "smooth" }))
     );
   });
+
+  /* ---------- スマホ: 最初に一度だけ「本人の顔」を見せて、切り替えられることを伝える ---------- */
+  if (touchOnly && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const peek = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((en) => {
+          if (!en.isIntersecting) return;
+          peek.unobserve(en.target);
+          const card = en.target;
+          const i = [...card.parentNode.children].indexOf(card);
+          setTimeout(() => {
+            if (card.classList.contains("show-real")) return;
+            card.classList.add("peek");
+            setTimeout(() => card.classList.remove("peek"), 1400);
+          }, 600 + i * 250);
+        }),
+      { threshold: 0.6 }
+    );
+    document.querySelectorAll(".member-card .has-real").forEach((ph) => peek.observe(ph.closest(".member-card")));
+  }
 
   /* ---------- スクロールでフェードイン ---------- */
   const io = new IntersectionObserver(

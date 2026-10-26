@@ -247,6 +247,23 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
   .member-card:hover .photo-badge .b-real { display: inline; }
 }
 .member-card:focus-visible .photo-real { opacity: 1; }
+.photo-badge .b-swap { display: none; }
+/* 本人の顔を表示中（スマホでタップ／最初のプレビュー） */
+.member-card.show-real .photo-real, .member-card.peek .photo-real { opacity: 1; }
+.member-card.show-real .photo-badge .b-ai, .member-card.peek .photo-badge .b-ai { display: none; }
+.member-card.show-real .photo-badge .b-real, .member-card.peek .photo-badge .b-real { display: inline; }
+/* スマホ・タブレット: 札を押しやすいボタンにする */
+@media (hover: none) {
+  .photo-badge {
+    left: 6px; top: 6px; padding: 7px 12px; font-size: 11px;
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid rgba(255,255,255,.45); border-radius: 999px;
+    background: rgba(0,0,0,.6); backdrop-filter: blur(4px);
+  }
+  .photo-badge .b-swap { display: inline; font-size: 13px; letter-spacing: 0; }
+  .member-card.show-real .photo-badge { background: var(--mc); color: #000; border-color: var(--mc); }
+  .photo-badge:active { transform: scale(.94); }
+}
 .member-photo img { object-position: top; }
 .member-card { border-bottom: 3px solid var(--mc); padding-bottom: 4px; }
 .member-card:hover .ph img { transform: scale(1.05); }

@@ -124,7 +124,8 @@ window.SITE = {
       ],
       awards: ["グッドデザイン・ニューホープ　2024"], // 受賞歴（空なら非表示）
       bio: "椅子に向かないと言われる針葉樹に切り込みを入れ、木を柔らかくして座れる形にする。散歩中に気になった石の「内側」を、割らずに見たくて透明な素材で出力する。「日常にあるものが当たり前に作られていることに、毎日のように感動してしまう」と語る、Khaotic4 の\"手\"であり、リーダー。話すのが好き。",
-      photo: "assets/images/profile/members/yuno.png",
+      photo: "assets/images/profile/members/yuno_ai.jpg",       // AI生成の顔（通常表示）
+      photoReal: "assets/images/profile/members/yuno_real.jpg", // 実際の顔（カーソルを合わせると表示）
       realPhoto: "assets/images/gallery/photo/yuno.jpg",
       gallery: [
         "assets/images/profile/members/yuno-stage.jpg",
@@ -151,7 +152,8 @@ window.SITE = {
         "AIに書かせた詩を二人で読み合わせる作品「Googleマップを歩くAI」",
       ],
       bio: "理系で入学して、美術史へ。休学して、いま人生の途中で立ち止まっているところをそのまま舞台に持ってくる、Khaotic4 の\"声\"。推しの写真を見せながら3分間しゃべり続ける自己PR動画で審査員を笑わせた。「見せない作品もある。クリエイターは自意識との戦い」。白は、まだ何色にもなっていない色。",
-      photo: "assets/images/profile/members/koki.png",
+      photo: "assets/images/profile/members/koki_ai.jpg",       // AI生成の顔（通常表示）
+      photoReal: "assets/images/profile/members/koki_real.jpg", // 実際の顔（カーソルを合わせると表示）
       realPhoto: "assets/images/gallery/photo/koki.jpg",
       gallery: [
         "assets/images/profile/members/koki-stage.jpg",
@@ -179,7 +181,8 @@ window.SITE = {
         "ブラウザゲーム『風情！ いけばなゲーム』（2050年、いけばなが国技になった日本の接客ゲーム）",
       ],
       bio: "校舎に寝泊まりし、肘掛けのない椅子を4つ並べてベッドにしていたところを同居人に見つかる──そんな日常をそのまま自己紹介漫画にした。「百の言葉よりも仕草や姿勢のほうが人間性は表れる」。世界観をまず決めてから作る。結成の朝、自分の役割を「俺は完全に編集担当」と宣言した Khaotic4 の\"編集点\"。カメラの後ろにも、前にも立つ。",
-      photo: "assets/images/profile/members/rintaro.png",
+      photo: "assets/images/profile/members/rintaro_ai.jpg",       // AI生成の顔（通常表示）
+      photoReal: "assets/images/profile/members/rintaro_real.jpg", // 実際の顔（カーソルを合わせると表示）
       realPhoto: "assets/images/gallery/photo/rintaro.jpg",
       gallery: [
         "assets/images/profile/members/rintaro-stage.jpg",
@@ -207,7 +210,8 @@ window.SITE = {
         "大阪・関西万博の制作に参加",
       ],
       bio: "中学3年で映像演出を始め、高校生のうちにドローンショーのクリエイターとして現場に立った。「演出を考えて、PCを叩く人」の立場を貫いてきた最年少。万人受けしない、売れないと言われがちな\"ノイズ\"こそ宝だと考え、「なんだこれ」「キモいけど夢に出てきそう」と言われるものを作ってきた。Khaotic4 の\"光\"であり、ステージの設計者。結成の朝、自ら「メンバーカラーはピンクです」と宣言した。",
-      photo: "assets/images/profile/members/rin.png",
+      photo: "assets/images/profile/members/rin_ai.jpg",       // AI生成の顔（通常表示）
+      photoReal: "assets/images/profile/members/rin_real.jpg", // 実際の顔（カーソルを合わせると表示）
       realPhoto: "assets/images/gallery/photo/rin.jpg",
       gallery: [
         "assets/images/profile/members/rin-stage.jpg",

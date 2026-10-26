@@ -178,7 +178,13 @@
       : [];
     return `
     <button class="member-card" data-member="${esc(m.id)}" style="--mc:${esc(m.color || "#fff")}">
-      ${img(m.photo, m.name, "member-photo")}
+      ${m.photoReal
+        ? `<div class="ph member-photo has-real" data-file="${esc(m.photo)}">
+             <img class="photo-ai" src="${esc(p(m.photo))}" alt="${esc(m.name)}（AI生成）" loading="lazy">
+             <img class="photo-real" src="${esc(p(m.photoReal))}" alt="${esc(m.name)}" loading="lazy">
+             <span class="photo-badge"><span class="b-ai">AI</span><span class="b-real">REAL</span></span>
+           </div>`
+        : img(m.photo, m.name, "member-photo")}
       <span class="member-name">${esc(m.name)}</span>
       ${m.nameJa ? `<span class="member-name-ja">${esc(m.nameJa)}</span>` : ""}
       ${facts.length ? `<dl class="member-facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}

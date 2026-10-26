@@ -231,6 +231,22 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
 .member-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: clamp(40px, 6vw, 80px); }
 .member-card { display: block; text-align: left; width: 100%; }
 .member-photo { aspect-ratio: 4 / 5; }
+/* AI生成の顔 ⇄ 実際の顔（カーソルを合わせると実際の顔に切り替わる） */
+.member-photo.has-real { aspect-ratio: 1 / 1; }
+.member-photo.has-real img { position: absolute; inset: 0; object-position: center; }
+.member-photo .photo-real { opacity: 0; transition: opacity .45s ease, transform .8s cubic-bezier(.2,.7,.2,1), filter .35s; }
+.photo-badge {
+  position: absolute; left: 8px; top: 8px; z-index: 1;
+  font-family: var(--font-en); font-size: 10px; letter-spacing: .15em;
+  padding: 2px 8px; background: rgba(0,0,0,.55); color: #fff;
+}
+.photo-badge .b-real { display: none; }
+@media (hover: hover) {
+  .member-card:hover .photo-real { opacity: 1; }
+  .member-card:hover .photo-badge .b-ai { display: none; }
+  .member-card:hover .photo-badge .b-real { display: inline; }
+}
+.member-card:focus-visible .photo-real { opacity: 1; }
 .member-photo img { object-position: top; }
 .member-card { border-bottom: 3px solid var(--mc); padding-bottom: 4px; }
 .member-card:hover .ph img { transform: scale(1.05); }

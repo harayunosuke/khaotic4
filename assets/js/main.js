@@ -204,6 +204,7 @@
       <span class="member-name">${esc(m.name)}</span>
       ${m.nameJa ? `<span class="member-name-ja">${esc(m.nameJa)}</span>` : ""}
       ${facts.length ? `<dl class="member-facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}
+      <span class="member-more-wrap"><span class="member-more">PROFILE<span class="member-more-arrow" aria-hidden="true">→</span></span></span>
     </button>`;
   };
 

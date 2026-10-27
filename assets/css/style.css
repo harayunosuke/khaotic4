@@ -389,16 +389,30 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
 /* メンバーカード: 浮く + メンバーカラーの枠 + 「VIEW →」 */
 .member-card { padding: 8px 8px 12px; margin: -8px; width: calc(100% + 16px); transition: transform .35s cubic-bezier(.2,.7,.2,1), background .35s; }
 .member-card .member-photo { transition: outline-color .3s; outline: 3px solid transparent; outline-offset: -3px; }
-.member-name::after {
-  content: "VIEW →"; margin-left: auto; font-size: 11px; letter-spacing: .15em; color: var(--mc);
-  opacity: 0; transform: translateX(-8px); transition: opacity .3s, transform .3s;
+/* 詳細プロフィールへの誘導（常に表示される PROFILE → ボタン） */
+.member-card { display: flex; flex-direction: column; cursor: pointer; }
+.member-more-wrap { margin-top: auto; padding-top: 14px; }
+.member-more {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px; border: 1px solid var(--mc); color: var(--text);
+  font-family: var(--font-en); font-size: 12px; letter-spacing: .2em;
+  transition: background .25s, color .25s;
 }
+.member-more-arrow { transition: transform .25s; }
+.member-card:active .member-more { background: var(--mc); color: #000; }
+.member-hint {
+  margin-top: clamp(32px, 5vw, 56px); font-size: 13px; color: var(--text-sub);
+  display: flex; align-items: center; gap: 8px;
+}
+.member-hint::before { content: "↓"; font-family: var(--font-en); color: var(--accent); }
+.member-hint + .member-grid { margin-top: 20px !important; }
 
 @media (hover: hover) {
   .member-card:hover { transform: translateY(-6px); background: rgba(255,255,255,.05); }
   .member-card:hover .member-photo { outline-color: var(--mc); }
   .member-card:hover .ph img { transform: scale(1.06); filter: brightness(1.08); }
-  .member-card:hover .member-name::after { opacity: 1; transform: none; }
+  .member-card:hover .member-more { background: var(--mc); color: #000; }
+  .member-card:hover .member-more-arrow { transform: translateX(4px); }
 
   .movie-card:hover, .disc-tile:hover { transform: translateY(-4px); }
   .gallery-item:hover { transform: translateY(-3px); }
@@ -413,7 +427,7 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
 
 /* キーボード操作でも分かるように */
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.member-card:focus-visible .member-name::after { opacity: 1; transform: none; }
+.member-card:focus-visible .member-more { background: var(--mc); color: #000; }
 
 /* ---------- スマホ ---------- */
 @media (max-width: 767px) {

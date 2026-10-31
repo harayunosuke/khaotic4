@@ -133,6 +133,17 @@
     true
   );
 
+  // パソコン: カーソルを合わせている間は本人の顔。
+  // 端末の (hover: hover) 判定に頼らず、マウス・ペンのポインターが乗ったかで切り替える（タッチは除く）。
+  const setHover = (e, on) => {
+    if (e.pointerType === "touch") return;
+    const card = e.target.closest(".member-card");
+    if (!card || card.contains(e.relatedTarget)) return;
+    card.classList.toggle("is-hover", on);
+  };
+  document.addEventListener("pointerover", (e) => setHover(e, true));
+  document.addEventListener("pointerout", (e) => setHover(e, false));
+
   const playVideo = ({ yt, video }) => {
     if (yt)
       return openModal(`<div class="video-wrap"><iframe src="https://www.youtube.com/embed/${encodeURIComponent(yt)}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>`, "is-video");

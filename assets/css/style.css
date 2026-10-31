@@ -252,6 +252,10 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
 .member-card.show-real .photo-real, .member-card.peek .photo-real { opacity: 1; }
 .member-card.show-real .photo-badge .b-ai, .member-card.peek .photo-badge .b-ai { display: none; }
 .member-card.show-real .photo-badge .b-real, .member-card.peek .photo-badge .b-real { display: inline; }
+/* カーソルを合わせている間（JS が付ける。端末の hover 判定に左右されない） */
+.member-card.is-hover .photo-real { opacity: 1; }
+.member-card.is-hover .photo-badge .b-ai { display: none; }
+.member-card.is-hover .photo-badge .b-real { display: inline; }
 /* スマホ・タブレット: 札を押しやすいボタンにする */
 @media (hover: none) {
   .photo-badge {
@@ -380,6 +384,8 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
 /* 触れる端末では hover が張り付くので、マウス操作のときだけ動かす */
 .member-card, .movie-card, .disc-tile, .gallery-item { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
 .member-card .ph img, .movie-card .ph img, .disc-tile .ph img, .gallery-item .ph img { transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .35s; }
+/* 本人の顔はふわっと切り替える（上の transition で opacity が消えないように） */
+.member-card .ph .photo-real { transition: opacity .45s ease, transform .8s cubic-bezier(.2,.7,.2,1), filter .35s; }
 .movie-title, .disc-tile p { transition: color .2s; }
 .header-logo, .footer-logo { display: inline-block; transition: opacity .2s; }
 .modal-close { transition: transform .3s, color .2s; }

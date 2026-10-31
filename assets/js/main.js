@@ -51,6 +51,7 @@
     ["DISCOGRAPHY", "discography/", "discography"],
     ["MOVIE", "movie/", "movie"],
     ["DOCUMENTARY", "documentary/", "documentary"],
+    ["REPORT", "report/", "report"],
     ["GALLERY", "gallery/", "gallery"],
   ];
   const navHtml = () =>
@@ -314,6 +315,11 @@
 
   /* ---------- DOCUMENTARY ページ ---------- */
   fill("#documentary-list", docs.map(movieCard).join(""));
+
+  /* ---------- REPORT（報告動画） ---------- */
+  const reports = [...(S.reports || [])].sort((a, b) => b.date.localeCompare(a.date));
+  fill("#top-report", reports.map(movieCard).join(""));
+  fill("#report-list", reports.map(movieCard).join(""));
 
   /* ---------- NEWS ページ ---------- */
   const newsList = $("#news-list");

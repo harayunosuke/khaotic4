@@ -866,6 +866,19 @@ Again and again
     },
   ],
 
+  /* ---------- REPORT（報告動画） ---------- */
+  // 書き方は movies と同じ（youtubeId を入れるとサムネイルは自動取得）。
+  reports: [
+    {
+      title: "Khaotic4 報告動画",
+      date: "2026.10.31",
+      category: "REPORT",
+      youtubeId: "sr2TnFa4aBU",
+      video: "",
+      thumb: "",
+    },
+  ],
+
   /* ---------- GALLERY ---------- */
   // dir の中の files を並べます。写真を足すときはフォルダに入れて files に名前を追加。
   gallery: [

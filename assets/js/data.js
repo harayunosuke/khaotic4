@@ -69,7 +69,7 @@ window.SITE = {
       category: "MUSIC",
       title: "「カオス革命家」Music Video 公開",
       body: "「カオス革命家」の Music Video を公開しました。MOVIE ページからご覧いただけます。",
-      image: "assets/images/gallery/live/live_03.jpg",
+      image: "assets/images/gallery/stage/stage_01.jpg",
       song: "カオス革命家",
     },
     {
@@ -882,26 +882,7 @@ Again and again
   /* ---------- GALLERY ---------- */
   // dir の中の files を並べます。写真を足すときはフォルダに入れて files に名前を追加。
   gallery: [
+    { category: "LIVE", dir: "assets/images/gallery/stage/", files: ["stage_01.jpg", "stage_02.jpg", "stage_03.jpg", "stage_04.jpg"] },
     { category: "PHOTO", dir: "assets/images/gallery/photo/", files: ["koki.jpg", "rin.jpg", "rintaro.jpg", "yuno.jpg"] },
-    { category: "LIVE", dir: "assets/images/gallery/live/", files: ["live_01.jpg", "live_02.jpg", "live_03.jpg", "group_01.jpg", "group_02.jpg", "group_03.jpg"] },
-    { category: "COSTUME", dir: "assets/images/gallery/costume/", files: ["costume_koki.jpg", "costume_rin.jpg", "costume_rintaro.jpg", "costume_yuno.jpg"] },
-    { category: "MV MAKING", dir: "assets/images/gallery/making/", files: ["making_koki4.jpg", "making_koki5.jpg", "making_rin6.jpg", "making_rin7.jpg", "making_rin8.jpg", "making_rintaro2.jpg", "making_rintaro3.jpg", "making_yuno3.jpg", "making_yuno4.jpg", "making_yuno5.jpg"] },
-    {
-      category: "INTERVIEW",
-      dir: "assets/images/gallery/interview/",
-      files: [
-        "interview_all1.jpg", "interview_all2.jpg",
-        "interview_koki1.jpg", "interview_koki2.jpg", "interview_koki6.jpg", "interview_koki7.jpg", "interview_koki8.jpg", "interview_koki9.jpg", "interview_koki10.jpg",
-        "interview_rin1.jpg", "interview_rin2.jpg", "interview_rin9.jpg", "interview_rin10.jpg", "interview_rin11.jpg", "interview_rin12.jpg", "interview_rin13.jpg",
-        "interview_rintaro1.jpg", "interview_rintaro2.jpg", "interview_rintaro4.jpg", "interview_rintaro5.jpg",
-        "interview_yuno1.jpg", "interview_yuno2.jpg", "interview_yuno6.jpg", "interview_yuno7.jpg", "interview_yuno8.jpg",
-      ],
-    },
-    {
-      category: "BEFORE DEBUT",
-      dir: "assets/images/gallery/before-debut/",
-      files: ["koki.jpg", "koki1.jpg", "koki2.jpg", "koki3.jpg", "rin.jpg", "rin1.jpg", "rin2.jpg", "rin3.jpg", "rin4.jpg", "rin5.jpg", "rintaro.jpg", "yuno1.jpg", "yuno2.jpg"],
-    },
-    { category: "EVENT", dir: "assets/images/gallery/event/", files: ["oshi_vote_01_four.jpg", "oshi_vote_02_chant.jpg"] },
   ],
 };

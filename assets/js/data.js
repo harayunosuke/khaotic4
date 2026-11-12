@@ -84,7 +84,7 @@ window.SITE = {
 
   /* ---------- PROFILE ---------- */
   group: {
-    photo: "assets/images/profile/group/group-main.jpg",
+    photo: "assets/images/profile/group/group-main_v2.jpg",
     // トップページの PROFILE 欄に出す文章（1段落ごとに "" で区切る。\n は段落内の改行）
     topDescription: [
       "もし、もう一つの人生を生きることができるとしたら。",

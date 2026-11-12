@@ -223,8 +223,8 @@ time { font-family: var(--font-en); letter-spacing: .1em; color: var(--text-sub)
 /* ---------- PROFILE ---------- */
 .profile-top { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
 /* 写真は切り抜かずに元の比率（3:2）で表示。長文の横でスクロール追従 */
-.group-photo { aspect-ratio: 3 / 2; position: sticky; top: calc(var(--header-h) + 24px); }
-.group-photo img { object-position: center 30%; }
+.group-photo { aspect-ratio: 4 / 3; position: sticky; top: calc(var(--header-h) + 24px); }
+.group-photo img { object-position: center; }
 .group-name { font-family: var(--font-en); font-size: 40px; margin-bottom: 16px; }
 .lead { white-space: pre-line; line-height: 2.1; }
 .lead + .lead { margin-top: 1.4em; }

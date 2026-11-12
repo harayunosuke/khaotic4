@@ -234,6 +234,42 @@ window.SITE = {
   // date / tracks / links は分かり次第入れてください（空欄は非表示）。
   discography: [
     {
+      title: "共感羞恥",
+      type: "Digital Single",
+      date: "2026.11.13",
+      jacket: "assets/images/discography/14_kyokan_shuchi.jpg",
+      credit: "作詞：YUNO　作曲：YUNO",
+      youtubeId: "UIRXkyVS-Ck", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=UIRXkyVS-Ck" },
+      lyrics: `鏡の前で 何度もリピート
+右手だけ置いてきぼり おくれるビート
+「良くなってる」って先生の声が
+胸に刺さってしまうんだ
+
+スマホで撮った 練習動画
+頭の中じゃ 完璧なフォーム
+画面の中じゃ ただのノイズ
+
+アイドルのつもりが ソーランぶし
+見返すたびに 共感羞恥
+重ねたステップ 押せないリセット
+
+やってみた ボイスレッスン
+声はまだまだ コーヒーフレッシュ
+あの理想に いつか追いつける？
+
+月謝払って またレッスン
+増えたのは 筋肉痛とレシート
+何度も楽曲を デリート
+
+アイドルのつもりが ソーランぶし
+大勢の前で　 共感羞恥
+重ねたステップ 押せないリセット
+
+下手なままの僕たち`,
+    },
+    {
       title: "近いがゆえにエグ彼方！",
       type: "Digital Single",
       date: "2026.09.28",

@@ -234,6 +234,43 @@ window.SITE = {
   // date / tracks / links は分かり次第入れてください（空欄は非表示）。
   discography: [
     {
+      title: "君の瞳を奪取！",
+      type: "Digital Single",
+      date: "2026.11.14",
+      jacket: "assets/images/discography/15_kimi_no_hitomi.jpg",
+      credit: "作詞：YUNO　作曲：YUNO",
+      youtubeId: "-T0wqCSeDzg", // ▶ で再生（YouTube 埋め込み）
+      tracks: [],
+      links: { youtube: "https://www.youtube.com/watch?v=-T0wqCSeDzg" },
+      lyrics: `ねえ、こっち向いて
+ちょっとだけでいいから
+その続きはあとでいいよ
+君の瞳を奪取　奪取　奪取！
+
+何気なく開いた扉
+いつの間にか僕らの色
+昨日よりもちょっと近く
+明日はもっとそばにいて
+
+一度きりじゃ足りないでしょ？
+もう一回って聞かせてよ
+君の「好き」が増えるたび
+僕らはもっと輝くんだ
+
+あと少し　あと少し
+まだ終わらせたくない
+知らないうちにほら
+僕らでいっぱい
+
+君の瞳を奪取　奪取　奪取！
+甘い夢の続きを
+目を離したその瞬間も
+思い出してほしいんだ
+
+君の瞳を奪取　奪取　奪取！
+何度だって会いたいよ`,
+    },
+    {
       title: "共感羞恥",
       type: "Digital Single",
       date: "2026.11.13",

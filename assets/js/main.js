@@ -183,8 +183,11 @@
   // ニュースに曲が紐づいていれば ▶ PLAY（歌詞付きプレイヤー）と DISCOGRAPHY へのリンク
   const newsSong = (n) => {
     const i = n.song ? S.discography.findIndex((d) => d.title === n.song) : -1;
-    if (i < 0 || !S.discography[i].youtubeId) return "";
-    return `<div class="disc-links"><a class="btn-sm btn-play" href="#" data-disc="${i}">▶ PLAY</a><a class="btn-sm" href="${ROOT}discography/index.html">DISCOGRAPHY</a></div>`;
+    if (i >= 0 && S.discography[i].youtubeId)
+      return `<div class="disc-links"><a class="btn-sm btn-play" href="#" data-disc="${i}">▶ PLAY</a><a class="btn-sm" href="${ROOT}discography/index.html">DISCOGRAPHY</a></div>`;
+    // 曲以外のお知らせ: link（{ label, url }）があればそのページへのボタン
+    if (n.link) return `<div class="disc-links"><a class="btn-sm" href="${ROOT}${esc(n.link.url)}">${esc(n.link.label)} →</a></div>`;
+    return "";
   };
   const sortedNews = () => S.news.map((n, i) => ({ ...n, i })).sort((a, b) => b.date.localeCompare(a.date));
 

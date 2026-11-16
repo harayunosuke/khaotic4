@@ -404,7 +404,7 @@ Khaotic4！ Here we go！
       title: "君の瞳を奪取！",
       type: "Digital Single",
       date: "2026.11.14",
-      jacket: "assets/images/discography/15_kimi_no_hitomi.jpg",
+      jacket: "assets/images/discography/15_kimi_no_hitomi_v2.jpg",
       credit: "作詞：YUNO　作曲：YUNO",
       youtubeId: "-T0wqCSeDzg", // ▶ で再生（YouTube 埋め込み）
       tracks: [],
